@@ -1,0 +1,36 @@
+Date: Mon, 13 Dec 2021 18:48:03 +0100
+From: Tom Kearns <linux54@riseup.net>
+To: sean.kearns1705@gmail.com
+Subject: amazon
+Message-ID: <20211213174800.vurnrw4gcu7ttwgo@Monad.localdomain>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="2cd27vnginn5bcov"
+Content-Disposition: inline
+
+
+--2cd27vnginn5bcov
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+https://www.amazon.de/Wera-8790-HMA-Deep-Steckschl%C3%BCsseleinsatz/dp/B07X84BDP4/?_encoding=UTF8&pd_rd_w=t0K6S&pf_rd_p=7aea3315-f77b-4e1e-b229-6417d8e76d86&pf_rd_r=Y1PQSFBHKHZ31JAHMBJE&pd_rd_r=7a2ba9ff-18b1-4bd7-8c87-2c1cadbf1ff4&pd_rd_wg=Uil4i&ref_=pd_gw_cr_cartx
+
+--2cd27vnginn5bcov
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAABCAAdFiEEfAv8hT7hMuO9AwK6gHT/4J+t5qQFAmG3h00ACgkQgHT/4J+t
+5qTo7gwA0LoPA1LCnudCr6HHWDkQoTS6F1Wt9ElkFTAC4ZNMSDyINBKb5/CZ0rpB
+SIdPYbq5on4Oe1flQ9mfwyVfHxMRBvBPdLmuncCvdd0I/IbuNk7vz0zMEHkGiqEi
+9fzHRdh/OWkL0qzXuroXwKbt5JEdIXImOTGFVurUNPlqOkwv5QojtRnUqVAItzqC
+D4wewpCutbBfUUNog/I4qNUAGy4FMfv+YJSzF8WtLnDl58ORP5iWAAeFAfUT253P
+9mDpl12plavYXEf7lL+E/28gt5siuGyLr2HSio27OToFeC4PjDZ3vT3WQfGwZjJk
+cDnwi8XCxhWFFiK+AOibUaj1IAPkNNkSe8xwIFiqWhJXQQrBeYv9geE6S40doL3F
+f/l4gcnlpQxW/8SO/ZH5vF4ubgXhluYHSgIskVzS6y9C9vSB51yDrVjOaEUT3Jab
+gydrcfHEaFzoQTBDPfIiJIm/8Gia5G3w2e09lSrmyfV2npQtm9M8eY/H3r5W+z22
+W0j4Orlo
+=E6r3
+-----END PGP SIGNATURE-----
+
+--2cd27vnginn5bcov--

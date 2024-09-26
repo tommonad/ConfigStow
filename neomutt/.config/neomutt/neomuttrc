@@ -1,0 +1,364 @@
+#vim: filetype=neomuttrc
+
+# Account
+set realname  = "Tom Kearns"
+set from      = "linux54@riseup.net"
+
+# Send
+set smtp_url  = "smtps://linux54@riseup.net@mail.riseup.net:465/"
+set sendmail  = "/usr/bin/msmtp -a mail.riseup.net"
+
+# Connection
+set ssl_force_tls = "yes"
+set ssl_starttls  = "yes"
+
+#set smtp_authenticators = "login"
+
+# receive
+set imap_user = "linux54@riseup.net"
+set imap_pass = "JBuFzm9GHvXgyeBJ"
+set mbox_type = Maildir
+set folder    = "~/.config/neomutt/Mail"
+set imap_check_subscribed
+set smtp_pass = "JBuFzm9GHvXgyeBJ"
+set mailcap_path="~/.config/neomutt/mailcap"
+set smtp_authenticators = 'gssapi:login'
+
+unmailboxes *
+# Folder
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+set trash     = "+Trash"
+set record    = "+Sent"
+set header_cache = "~/.config/neomutt/net.riseup.linux54/cache/headers"
+set message_cachedir = "~/.config/neomutt/net.riseup.linux54/cache/bodies"
+set certificate_file = "~/.config/neomutt/net.riseup.linux54/certificates"
+mailboxes "=INBOX" "=Drafts" "=Important" "=Rombach" "=Sent" "=Spam" "=Trash" 
+#mailboxes =INBOX
+#mailboxes =Tom 
+#mailboxes =Important/Rombach 
+
+unset imap_passive
+set editor='nvim'
+source ~/.config/neomutt/aliases
+auto_view text/html text/calendar application/ics
+set status_format = "$from -%r-Neomutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+
+# Gpg stuff
+set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xDBD0F842 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xDBD0F842 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+set pgp_autosign=yes
+set pgp_sign_as=A325520B0C63FD73FFC14F948A053D725A1152E1
+set postpone_encrypt_as=A325520B0C63FD73FFC14F948A053D725A1152E1
+set postpone_encrypt=yes
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"
+
+# Formats
+set date_format="%d/%b/%y (%a)  %H:%M"
+set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
+set sort = 'reverse-date'
+set smtp_authenticators = 'gssapi:login'
+#set query_command = "abook --neomutt-query '%s'"
+set rfc2047_parameters = yes
+set sleep_time = 0		# Pause 0 seconds for informational messages
+set markers = no		# Disables the `+` displayed at line wraps
+set mark_old = no		# Unread mail stay unread until read
+set mime_forward = yes		# attachments are forwarded with mail
+set wait_key = no		# mutt won't ask "press key to continue"
+set fast_reply			# skip to compose when replying
+set fcc_attach			# save attachments with the body
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote		# include message in forwards
+set reverse_name		# reply as whomever it was to
+set include			# include message in replies
+set timeout="5"
+set mail_check="10" # to avoid lags using IMAP with some email providers (yahoo for example)
+auto_view text/html		# automatically show html (mailcap uses w3m)
+auto_view application/pgp-encrypted
+alternative_order text/plain text/enriched text/html
+
+# Macros
+macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+macro index O "<shell-escape>offlineimap -o<enter>" "run offlineimap to sync all mail"
+macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+macro index A "<limit>all\n" "show all messages (undo limit)"
+macro index,pager L "<enter-command>set pipe_decode = yes<enter><pipe-message>urlscan<enter><enter-command>set pipe_decode = no<enter>""view URLs"
+
+
+# Sidebar mappings
+set sidebar_visible = no
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
+
+# Default index colors:
+color index red default '.*'
+color index_author cyan default '.*'
+color index_number blue default
+color index_subject brightyellow default '.*'
+
+# New mail is boldened:
+color index brightyellow black "~N"
+color index_author brightred black "~N"
+color index_subject brightcyan black "~N"
+
+# Tagged mail is highlighted:
+color index brightyellow blue "~T"
+color index_author brightred blue "~T"
+color index_subject brightcyan blue "~T"
+
+# Other colors and aesthetic settings:
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+color normal default default
+color indicator brightblack white
+color sidebar_highlight red default
+color sidebar_divider brightblack black
+color sidebar_flagged red black
+color sidebar_new green black
+color normal brightyellow default
+color error red default
+color tilde black default
+color message cyan default
+color markers red white
+color attachment white default
+color search brightmagenta default
+color status brightyellow black
+color hdrdefault brightgreen default
+color quoted green default
+color quoted1 blue default
+color quoted2 cyan default
+color quoted3 yellow default
+color quoted4 red default
+color quoted5 brightred default
+color signature brightgreen default
+color bold black default
+color underline black default
+color normal default default
+
+# Regex highlighting:
+color header blue default ".*"
+color header brightmagenta default "^(From)"
+color header brightcyan default "^(Subject)"
+color header brightwhite default "^(CC|BCC)"
+color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+color body brightblue default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+color body green default "\`[^\`]*\`" # Green text between ` and `
+color body brightblue default "^# \.*" # Headings as bold blue
+color body brightcyan default "^## \.*" # Subheadings as bold cyan
+color body brightgreen default "^### \.*" # Subsubheadings as bold green
+color body yellow default "^(\t| )*(-|\\*) \.*" # List items as yellow
+color body brightcyan default "[;:][-o][)/(|]" # emoticons
+color body brightcyan default "[;:][)(|]" # emoticons
+color body brightcyan default "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body brightcyan default "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body red default "(BAD signature)"
+color body cyan default "(Good signature)"
+color body brightblack default "^gpg: Good signature .*"
+color body brightyellow default "^gpg: "
+color body brightyellow red "^gpg: BAD signature from.*"
+mono body bold "^gpg: Good signature"
+mono body bold "^gpg: BAD signature from.*"
+color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+# System configuration file for NeoMutt
+#
+#--------HTML Rendering
+# open in gui prees v and go down to text/html and press m
+# Default list of header fields to weed when displaying.
+# Ignore all lines by default...
+#ignore *
+#
+## ... then allow these through.
+#unignore from: subject to cc date x-mailer x-url user-agent
+#
+## Display the fields in this order
+#hdr_order date from to cc subject
+#
+## imitate the old search-body function
+#macro index \eb "<search>~b " "search in message bodies"
+#
+## simulate the old url menu
+#macro index,pager,attach,netpose \cb "\
+#<enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
+#<pipe-message> urlview<Enter>\
+#<enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+##call urlview to extract URLs out of a message"
+#
+## Show documentation when pressing F1
+#macro generic,pager <F1> "<shell-escape> less /usr/share/doc/neomutt/manual.txt<Enter>" "show NeoMutt documentation"
+#
+## show the inneting mailboxes list (just like "neomutt -y") and back when pressing "y"
+#macro index y "<change-folder>?" "show inneting mailboxes list"
+#macro pager y "<exit><change-folder>?" "show inneting mailboxes list"
+#bind browser y exit
+
+# Handler for gzip netpressed mailboxes
+# open-hook   '\.gz$' "gzip --stdout --denetpress '%f' >  '%t'"
+# close-hook  '\.gz$' "gzip --stdout              '%t' >  '%f'"
+# append-hook '\.gz$' "gzip --stdout              '%t' >> '%f'"
+
+# If NeoMutt is unable to determine your site's domain name correctly, you can
+# set the default here.
+#
+# set hostname=cs.hmc.edu
+
+# If your sendmail supports the -B8BITMIME flag, enable the following
+#
+# set use_8bitmime
+
+# Use mime.types to look up handlers for application/octet-stream. Can
+# be undone with unmime_lookup.
+mime_lookup application/octet-stream
+
+# System-wide CA file managed by the ca-certificates package
+#set ssl_ca_certificates_file="/etc/ssl/certs/ca-certificates.crt"
+
+#"
+#" *** DEFAULT SETTINGS FOR THE ATTACHMENTS PATCH ***
+#"
+
+#"
+#" Please see the manual (section "attachments")  for detailed
+#" documentation of the "attachments" command.
+#"
+#" Removing a pattern from a list removes that pattern literally. It
+#" does not remove any type matching the pattern.
+#"
+#"  attachments   +A */.*
+#"  attachments   +A image/jpeg
+#"  unattachments +A */.*
+#"
+#" This leaves "attached" image/jpeg files on the allowed attachments
+#" list. It does not remove all items, as you might expect, because the
+#" second */.* is not a matching expression at this time.
+#"
+#" Remember: "unattachments" only undoes what "attachments" has done!
+#" It does not trigger any matching on actual messages.
+
+#" Qualify any MIME part with an "attachment" disposition, EXCEPT for
+#" text/x-vcard and application/pgp parts. (PGP parts are already known
+#" to neomutt, and can be searched for with ~g, ~G, and ~k.)
+#"
+#" I've added x-pkcs7 to this, since it functions (for S/MIME)
+#" analogously to PGP signature attachments. S/MIME isn't supported
+#" in a stock neomutt build, but we can still treat it specially here.
+#"
+attachments   +A */.*
+attachments   -A text/x-vcard application/pgp.*
+attachments   -A application/x-pkcs7-.*
+
+#" Discount all MIME parts with an "inline" disposition, unless they're
+#" text/plain. (Why inline a text/plain part unless it's external to the
+#" message flow?)
+#"
+attachments   +I text/plain
+
+#" These two lines make NeoMutt qualify MIME containers.  (So, for example,
+#" a message/rfc822 forward will count as an attachment.)  The first
+#" line is unnecessary if you already have "attach-allow */.*", of
+#" course.  These are off by default!  The MIME elements contained
+#" within a message/* or multipart/* are still examined, even if the
+#" containers themselves don't qualify.
+#"
+#attachments  +A message/.* multipart/.*
+#attachments  +I message/.* multipart/.*
+
+#" You probably don't really care to know about deleted attachments.
+attachments   -A message/external-body
+attachments   -I message/external-body
+
+#"
+#" More settings
+#"
+set new_mail_command="notify-send --icon='/home/tom/dmenu/Icons/new-post.png' \
+'New Email' '%n new messages, %u unread.' &"
+set sidebar_non_empty_mailbox_only
+
+
+
+# vim: filetype=neomuttrc
+
+# General rebindings
+bind attach <return> view-mailcap
+bind attach l view-mailcap
+bind editor <space> noop
+bind pager c imap-fetch-mail
+bind index,pager M noop
+bind index,pager g noop
+bind index G last-entry
+bind index g noop
+bind index gg first-entry
+bind pager,attach h exit
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+bind index D delete-message
+bind index U undelete-message
+bind index L limit
+bind index h noop
+bind index l display-message
+bind browser h goto-parent
+bind browser l select-entry
+bind pager,browser gg top-page
+bind pager,browser G bottom-page
+bind index,pager,browser d half-down
+bind index,pager,browser u half-up
+bind index,pager R group-reply
+bind index \031 previous-undeleted	# Mouse wheel
+bind index \005 next-undeleted		# Mouse wheel
+bind pager \031 previous-line		# Mouse wheel
+bind pager \005 next-line		# Mouse wheel
+bind editor <Tab> complete-query
+
+# Navigation
+macro index,pager gd "<change-folder>=Drafts<enter>" "goto Drafts"
+macro index,pager gt "<change-folder>=Trash<enter>" "goto Trash"
+macro index,pager Mt ";<save-message>=Trash<enter>" "move to Trash"
+macro index,pager gi "<change-folder>=INBOX<enter>" "goto inbox"
+macro index,pager gm "<change-folder>=Important<enter>" "goto Important"
+macro index,pager Mm ";<save-message>=Important<enter>" "move to Important"
+macro index,pager gs "<change-folder>=Sent<enter>" "goto sent"
+macro index,pager Ms ";<save-message>=Sent<enter>" "move to Sent"
+macro index,pager gp "<change-folder>=Spam<enter>" "goto spam"
+macro index,pager Mp ";<save-message>=Spam<enter>" "move to Spam"
+macro index,pager gf "<change-folder>=Drafts<enter>" "goto spam"
+macro index,pager gr "<change-folder>=Rombach<enter>" "goto Rombach"
+macro index,pager Mr ";<save-message>=Rombach<enter>" "move to Rombach"
+macro index,pager ge "<change-folder>=Verena<enter>" "goto Verena"
+macro index,pager Me ";<save-message>=Verena<enter>" "move to Verena"
+
+# sidebar mappings
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager B sidebar-toggle-visible
+
+# global index and pager shortcuts
+bind index,pager @ compose-to-sender
+bind index,pager D purge-message
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+
+# Email completion bindings
+bind editor <Tab> complete-query
+bind editor ^T complete

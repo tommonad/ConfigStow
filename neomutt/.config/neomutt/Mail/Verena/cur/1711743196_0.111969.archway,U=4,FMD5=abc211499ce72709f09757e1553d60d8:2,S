@@ -1,0 +1,139 @@
+Return-Path: <schlufamimi@googlemail.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: 
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=-0.9 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at
+	*      https://www.dnswl.org/, no trust
+	*      [209.85.208.180 listed in dnswl.dnsbl]
+	* -0.9 BAYES_00 BODY: Bayes spam probability is 0 to 1%
+	*      [score: 0.0005]
+	* -0.1 NICK_TO Being sent to address with normal nick
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [schlufamimi[at]googlemail.com]
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	* -0.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [209.85.208.180 listed in wl.mailspike.net]
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	* -0.1 DCC_REPUT_13_19 DCC reputation between 13 and 19 %
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	* -0.0 T_SCC_BODY_TEXT_LINE No description available.
+	*  0.5 TXREP TXREP: Score normalizing based on sender's reputation
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+	 client-signature RSA-PSS (2048 bits) client-digest SHA256)
+	(Client CN "mx1.riseup.net", Issuer "R3" (not verified))
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4QlrD04kf8z4S
+	for <linux54@riseup.net>; Tue, 20 Jun 2023 15:29:52 +0000 (UTC)
+Received: from mail-lj1-f180.google.com (mail-lj1-f180.google.com [209.85.208.180])
+	(using TLSv1.3 with cipher TLS_AES_128_GCM_SHA256 (128/128 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4QlrD03jt2zDqPx
+	for <linux54@riseup.net>; Tue, 20 Jun 2023 15:29:52 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (2048-bit key; unprotected) header.d=googlemail.com header.i=@googlemail.com header.a=rsa-sha256 header.s=20221208 header.b=p3hgArCA;
+	dkim-atps=neutral
+Received: by mail-lj1-f180.google.com with SMTP id 38308e7fff4ca-2b46d4e1b0aso46533211fa.2
+        for <linux54@riseup.net>; Tue, 20 Jun 2023 08:29:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20221208; t=1687274991; x=1689866991;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Gt9PQbmNZs6yZfb+hfbh1JtPNJZ0OKms7DLjLFeGVAE=;
+        b=p3hgArCA/hZSiQuogMRNFV9ACGPGavKY6mpyErdOueuvu/If0Mmyl93gzscnO5iXAt
+         kdOoE2UGIaNMlR4sXJNntlW/KFFd8I9D0E8TaDxJlGMVixK6vFT1zBn8A49gADAX8sSP
+         MEvhEpqbuToPDucIcD+m9frv2vmXuswFcKITMqpxchpz+LK53MemqWF4X8lqCtATfg9K
+         N5VzRT6lO6rEzpYlEtf0IYhKnIF/8KnIunnqVSY5rXc4ks+v4R+Zj712rSWvlyid/pKn
+         GKxeWDSHqhLLRNs8KGXq7S4nb6huWYDVi0DSt7grPKPT+SDGhjzslDgG8rnAdXyV2fMj
+         PZVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1687274991; x=1689866991;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Gt9PQbmNZs6yZfb+hfbh1JtPNJZ0OKms7DLjLFeGVAE=;
+        b=d3TQFYxVFzUyKSQ2jDtUi4tBudoc+vLGcD8VUlB7HFz4ZDdkXrv5cp/YAjQxkM+1WZ
+         jE7bZ5y9dKAoePeqvk7ytvO8TYxSpNeqr+iptVfDx9bjcVk702zGakKoxbwBQ1+hBRDH
+         aaC12AI6bdJFTOU1yPNhoCCw48O0aeqyVqwcgCvvDhBAid0rxk1tBkyYBeUcJ17MOy28
+         t0wgPUzJiEWfUmw6xb03xIg3rf/Xn7wQPyWQBGAWkzZXj8U4OA9bhyOyWUUILo63mFqR
+         So9PMh1kPBW2QGUvluK3v/eeVY6lo2dSJ/ES1i8BczqiQx210H12+d2AX18FcrC38lSh
+         Tymg==
+X-Gm-Message-State: AC+VfDwCHhpx+irLaXl5Mrao8lcokD18r3i5V0t/Z4T5+Cccfht2gNcK
+	ycq+8Rf+6kd/fYq8WM9aQuFzsqpVOxV97/RmXtTaiOhtmUU=
+X-Google-Smtp-Source: ACHHUZ7B9PsiwwE3m1+dz6hhRdxSV5LJ0z2vZ9uKHbyvxePzWm8A2VRboEIQB0m2jetVzsMDXmvJ2dYD++cafbQigDw=
+X-Received: by 2002:a2e:9585:0:b0:2b5:81a8:3179 with SMTP id
+ w5-20020a2e9585000000b002b581a83179mr199704ljh.3.1687274990834; Tue, 20 Jun
+ 2023 08:29:50 -0700 (PDT)
+MIME-Version: 1.0
+From: A K <schlufamimi@googlemail.com>
+Date: Tue, 20 Jun 2023 17:29:39 +0200
+Message-ID: <CABJ8hwoUuuQ63HzyewZnR5OWf0k++1x=wQZ5sjKyWaJRN9jOag@mail.gmail.com>
+Subject: Verena
+To: Tom Kearns <linux54@riseup.net>
+Content-Type: multipart/alternative; boundary="0000000000007798c605fe9152c8"
+Content-Length: 2334
+
+--0000000000007798c605fe9152c8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Tom, danke Dir f=C3=BCr die pdfs und entschuldige die sp=C3=A4te R=C3=
+=BCckmeldung.
+Die meisten pdfs sehen gut aus.
+
+Bei dem "Athletes" m=C3=BCsste aber noch
+ab der Folie "What is non-Hodgkin's Lymphoma" bis Risk Factors for NHL eine
+separate Datei mit dem Namen "non-Hodgkin's Lymphoma" und
+
+ab der Folie "What is an Aura" bis zum Ende das Thema "Migr=C3=A4ne" separa=
+t
+daraus gemacht werden.
+
+Danke Dir. Ich muss mal schauen, ob ich vor es vor unserem Urlaub (ab
+Freitag) noch schaffe, andere Folien in den Ordner reinzuschieben, nach 1.
+Sichtung. Sonst w=C3=BCrde ich es Anfang Juli machen.
+Bitte schreib Dir in jedem Fall die Zeiten auf, die Du daf=C3=BCr aufwendes=
+t.
+
+Falls Sean mag kann er Benjamin =C3=BCber Instagram auf dem Segelschiff fol=
+gen =F0=9F=98=89
+Viele Gr=C3=BC=C3=9Fe
+Verena
+
+--0000000000007798c605fe9152c8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div dir=3D"auto">Hallo Tom, danke Dir f=C3=BCr die pdfs =
+und entschuldige die sp=C3=A4te R=C3=BCckmeldung. Die meisten pdfs sehen gu=
+t aus.=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">Bei dem &qu=
+ot;Athletes&quot; m=C3=BCsste aber noch=C2=A0</div><div dir=3D"auto">ab der=
+ Folie &quot;What is non-Hodgkin&#39;s Lymphoma&quot; bis Risk Factors for =
+NHL eine separate Datei mit dem Namen &quot;non-Hodgkin&#39;s Lymphoma&quot=
+; und</div><div dir=3D"auto"><br></div><div dir=3D"auto">ab der Folie &quot=
+;What is an Aura&quot; bis zum Ende das Thema &quot;Migr=C3=A4ne&quot; sepa=
+rat daraus gemacht werden.=C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">Danke Dir. Ich muss mal schauen, ob ich vor es vor unserem Urlaub=
+ (ab Freitag) noch schaffe, andere Folien in den Ordner reinzuschieben, nac=
+h 1. Sichtung. Sonst w=C3=BCrde ich es Anfang Juli machen.=C2=A0</div><div =
+dir=3D"auto">Bitte schreib Dir in jedem Fall die Zeiten auf, die Du daf=C3=
+=BCr aufwendest.=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">F=
+alls Sean mag kann er Benjamin =C3=BCber Instagram auf dem Segelschiff folg=
+en =F0=9F=98=89</div><div dir=3D"auto">Viele Gr=C3=BC=C3=9Fe</div><div dir=
+=3D"auto">Verena</div></div>
+
+--0000000000007798c605fe9152c8--

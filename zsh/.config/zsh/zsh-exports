@@ -1,0 +1,69 @@
+#!/bin/sh
+HISTFILE="$XDG_DATA_HOME"/zsh/history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTIGNORE=?:??
+export HISTCONTROL=ignoreboth
+export MANPAGER='nvim +Man!'
+export SYSTEMD_LESS=FRXMK journalctl
+export MANWIDTH=999
+export BROWSER=brave
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+# export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/share/go/bin:$PATH
+export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
+export SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin/Typon:$PATH
+export PATH=/bin:$PATH
+export PATH=$HOME/dmenu:$PATH
+export PATH=$HOME/scripts:$PATH
+export GOPATH=$HOME/.local/share/go
+export PATH=$JAVA_HOME/bin:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+source /usr/bin/virtualenvwrapper.sh
+# export GTK_PATH=/usr/lib/gtk-2.0:/usr/lib/gtk-3.0
+# export GTK_MODULES=canberra-gtk-module
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk/"
+# export SAL_USE_VCLPLUGIN=gtk4
+export LD_LIBRARY_PATH="/usr/lib/jvm/java-17-openjdk/lib:$LD_LIBRARY_PATH"
+
+# Cleaned home dir with these
+
+export TERMCMD="/usr/local/bin/st"
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/yarnrc"'
+eval "$(fnm env)"
+eval "$(zoxide init zsh)"
+# eval "`pip completion --zsh`"
+
+# Add all subdirectories of $HOME/scripts to PATH
+for dir in "$HOME/scripts"/*; do
+  if [ -d "$dir" ]; then
+    PATH="$dir:$PATH"
+  fi
+done
+
+export PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$("$HOME/.miniconda/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/.miniconda/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/.miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# These are from luke
+# Reverse layout of fuzzy finder and limit to 40%
+export FZF_DEFAULT_OPTS="--layout=reverse --height 50%"
+

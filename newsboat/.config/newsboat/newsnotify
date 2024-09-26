@@ -1,0 +1,4 @@
+#!/bin/env bash
+# File created on the 01-06-2021
+
+dunstify --icon=/home/tom/.config/newsboat/news.png "$1"

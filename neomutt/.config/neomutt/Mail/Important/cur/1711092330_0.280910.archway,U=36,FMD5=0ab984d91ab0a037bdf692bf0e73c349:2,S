@@ -1,0 +1,314 @@
+Return-Path: <andreakearns09@gmail.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: 
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=-0.2 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at
+	*      https://www.dnswl.org/, no trust
+	*      [209.85.208.46 listed in dnswl.dnsbl]
+	* -0.1 NICK_TO Being sent to address with normal nick
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [andreakearns09[at]gmail.com]
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+	*       in digit
+	*      [andreakearns09[at]gmail.com]
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.0 ODD_PUNCTUATION2 BODY: general bad punctuation as in 419s
+	* -0.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [209.85.208.46 listed in wl.mailspike.net]
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.1 DCC_REPUT_13_19 DCC reputation between 13 and 19 %
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	* -0.0 T_SCC_BODY_TEXT_LINE No description available.
+	*  0.0 T_FILL_THIS_FORM_SHORT Fill in a short form with personal
+	*      information
+	*  0.0 TXREP TXREP: Score normalizing based on sender's reputation
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4TzRck3hcrz5R
+	for <linux54@riseup.net>; Tue, 19 Mar 2024 09:43:50 +0000 (UTC)
+Received: from mail-ed1-f46.google.com (mail-ed1-f46.google.com [209.85.208.46])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4TzRck24Q0zDq7Y
+	for <linux54@riseup.net>; Tue, 19 Mar 2024 09:43:50 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (2048-bit key; unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=bIIBNQ2n;
+	dkim-atps=neutral
+Received: by mail-ed1-f46.google.com with SMTP id 4fb4d7f45d1cf-563bb51c36eso6120742a12.2
+        for <linux54@riseup.net>; Tue, 19 Mar 2024 02:43:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1710841429; x=1711446229; darn=riseup.net;
+        h=in-reply-to:from:to:references:content-language:subject:user-agent
+         :mime-version:date:message-id:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=TmO9chX4vxAQ/CLvQ/B4xRC5Z6tGfTvCCW1k3NlcJDM=;
+        b=bIIBNQ2ntmOqtkZX1d8GjB+gyS6egWjAZIMTaMmwJFnYSLjbbwOC0d9o30Lt0C59Gz
+         3v8f1aeG5OMYXQOiux1LmdvB7Ltsg7PmypcZTEbDVTmNjOw42Nmrg4R1lTuGevc6poQC
+         NOiNHlkHwG8fTx4hw/023qq7ZQNsqbFiyrng5rJ2s8uty1JGRsCCqkdMCbQOmpd8Bgyb
+         h9RIb0oaC5iasdTVlzNHy4bLBwSfL/jFSp6O9IuU9GUb264dLQCm4ZEikkT4R1arWMHW
+         03jlGdJZZJYo7CU7qd+GvoCK3JQAYsYkCKkXmPQqX39EIAV3EGp3OVlURwCmIi+ZhHHc
+         w5ng==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1710841429; x=1711446229;
+        h=in-reply-to:from:to:references:content-language:subject:user-agent
+         :mime-version:date:message-id:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=TmO9chX4vxAQ/CLvQ/B4xRC5Z6tGfTvCCW1k3NlcJDM=;
+        b=XQdFi/2Vgw9Hak+DgTsrhmdbHa6nta0MN/tWSrW2j5esqtYwKIroKwE+mwwaLK45Lc
+         GD2pYdZRBH1aFJBfaM+jStj16LQMPQjRL3QwZWZkkRkqivvn1bCSJee9gI27vAu26cf9
+         20OcZMMU7Zb28iY/VQ8WUrjKzkZTRKGmIk5Y/urqpIvkXAm7JN6odqRT4j7Jm1C4WT12
+         ZZQ2GGl7x1BvbkSuelR+/mOBeFLZEG0KM+SSM8pKLR52HHSoJ566HMu8HzglaJCoQI0b
+         NxejN/4qRNjzE91fLcqyKx/nvC7DglkqsPMLlL1S3ESI4SgDRfDZA5OvlNs6K3OjqCHr
+         Jf6Q==
+X-Gm-Message-State: AOJu0Yz51qBbvVGvdGAlnIJz6pkdFhzjXyr9Q1KSbM3apAoJzaBljch5
+	aIyAtBsl9S6EWPogrvx57QFR5MehnnQ5wmB/qFOCmNrJ40oj9h8o6pmG6H3/
+X-Google-Smtp-Source: AGHT+IGEn//EMmKKAWstNXfdZlremm18MDPT+QMg/asllW9p5nzrj6iW7Z5FKuEzqB5nsly1fX7eEQ==
+X-Received: by 2002:a17:906:758:b0:a46:a014:49fb with SMTP id z24-20020a170906075800b00a46a01449fbmr1415191ejb.27.1710841428502;
+        Tue, 19 Mar 2024 02:43:48 -0700 (PDT)
+Received: from ?IPV6:2a02:a03f:bcfe:cd00:9639:e5ff:feb7:594b? ([2a02:a03f:bcfe:cd00:9639:e5ff:feb7:594b])
+        by smtp.gmail.com with ESMTPSA id 9-20020a170906318900b00a46d04b6117sm1290897ejy.64.2024.03.19.02.43.47
+        for <linux54@riseup.net>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 19 Mar 2024 02:43:48 -0700 (PDT)
+Content-Type: multipart/alternative;
+ boundary="------------WARqBIe4KUyepPpmQ05e0EW2"
+Message-ID: <5a8bbdd9-890a-4148-8a49-d6c0fd61af6e@gmail.com>
+Date: Tue, 19 Mar 2024 10:43:46 +0100
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Fwd: RE: Mietsache Kearns
+Content-Language: en-US
+References: <PA4PR01MB9211BED03257747F87AD47018A2C2@PA4PR01MB9211.eurprd01.prod.exchangelabs.com>
+To: Tom Kearns <linux54@riseup.net>
+From: andrea <andreakearns09@gmail.com>
+In-Reply-To: <PA4PR01MB9211BED03257747F87AD47018A2C2@PA4PR01MB9211.eurprd01.prod.exchangelabs.com>
+X-Forwarded-Message-Id: <PA4PR01MB9211BED03257747F87AD47018A2C2@PA4PR01MB9211.eurprd01.prod.exchangelabs.com>
+Content-Length: 7359
+
+This is a multi-part message in MIME format.
+--------------WARqBIe4KUyepPpmQ05e0EW2
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+
+
+
+-------- Forwarded Message --------
+Subject: 	RE: Mietsache Kearns
+Date: 	Tue, 19 Mar 2024 07:28:31 +0000
+From: 	Sandra Brouwier <sandra.brouwier@vsz.be>
+To: 	andrea <andreakearns09@gmail.com>
+
+
+
+Guten Morgen Frau Kearns,
+
+Wenn Sie der Meinung sind, dass Sie nicht angehört werden, dass es keine 
+Möglichkeit gibt, eine Einigung mit der Gegenpartei zu erzielen, können 
+Sie den Friedensrichter um eine Entscheidung bitten.
+Hier sind die Kontaktdaten der Energieberatung von Ostbelgien :
+https://ostbelgienlive.be/desktopdefault.aspx/tabid-6233/10750_read-69226/
+
+Wir bleiben in Konfliktfällen, in denen wir beraten, neutral. Aus diesem 
+Grund kann ich Ihnen die E-Mail, die uns vom Anwalt der Gegenpartei 
+geschickt wurde, nicht weiterleiten.
+Ihr Anwalt kann auf Anfrage eine Kopie vom Anwalt der Gegenpartei erhalten.
+
+Ich wünsche Ihnen, dass Sie in aller Ruhe zu einer Einigung kommen. Wir 
+werden nicht mehr tätig, sobald ein Anwalt eingeschaltet wird. Wir 
+stehen Ihnen weiterhin für alle anderen Probleme zur Verfügung und 
+verbleiben,
+
+mit freundlichen Grüßen,
+
+
+Sandra Brouwier
+Beraterin
+Conseillère
+
+Verbraucherschutzzentrale VoG
+Neustraße 119
+B-4700 Eupen
+Tel.: +32/87/59 18 50
+http://www.vsz.be
+
+
+
+
+
+
+
+
+-----Message d'origine-----
+De : andrea <andreakearns09@gmail.com> Envoyé : lundi 18 mars 2024 17:55
+À : Sandra Brouwier <sandra.brouwier@vsz.be>
+Objet : Mietsache Kearns
+
+Guten Tag Frau Brouwier,
+
+hier liegt wohl ein Missverständnis vor.
+
+Natürlich kann der Vermieter in die Wohnung um Schäden zu begutachten 
+etc. Auch passt uns der Termin mit der Firma Leyendecker.
+
+Kennen Sie das Sprichwort "der Ton macht die Musik"? Wir empfinden den 
+Brief des Herrn Rombach als zutiefst unverschämt und voller Lügen . Wir 
+wollten nur wissen, ob man sich da wehren kann oder solche Verleumdungen 
+anhören muss, ohne etwas dagegen machen zu können.
+
+Auch hat mein Mann in meinem Beisein Herrn Rombach seinerzeit 
+informiert, daß wir gerne eine funktionierende Heizung hätten und kein 
+Interesse an den Sonnenzellen haben. Wir haben nie ein Einverständnis 
+gegeben oder unterschrieben. Natürlich ist das seine Sache, da es ja 
+nicht unser Haus ist.
+
+Wir werden uns jetzt selber um einen Anwalt bemühen und bitten Sie, uns 
+deshalb das Schreiben des Anwalts des Vermieters komplett zur Verfügung 
+zu stellen.
+
+Was ist denn das Energiebüro? Hätten Sie da bitte eine Anschrift bzw. 
+Telefonnummer.
+
+Mit freundlichen Grüßen,
+
+Andrea und  Thomas Kearns
+
+--------------WARqBIe4KUyepPpmQ05e0EW2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p><br>
+    </p>
+    <div class="moz-forward-container"><br>
+      <br>
+      -------- Forwarded Message --------
+      <table class="moz-email-headers-table" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">Subject:
+            </th>
+            <td>RE: Mietsache Kearns</td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">Date: </th>
+            <td>Tue, 19 Mar 2024 07:28:31 +0000</td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">From: </th>
+            <td>Sandra Brouwier <a class="moz-txt-link-rfc2396E" href="mailto:sandra.brouwier@vsz.be">&lt;sandra.brouwier@vsz.be&gt;</a></td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">To: </th>
+            <td>andrea <a class="moz-txt-link-rfc2396E" href="mailto:andreakearns09@gmail.com">&lt;andreakearns09@gmail.com&gt;</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      Guten Morgen Frau Kearns,<br>
+      <br>
+      Wenn Sie der Meinung sind, dass Sie nicht angehört werden, dass es
+      keine Möglichkeit gibt, eine Einigung mit der Gegenpartei zu
+      erzielen, können Sie den Friedensrichter um eine Entscheidung
+      bitten. <br>
+      Hier sind die Kontaktdaten der Energieberatung von Ostbelgien :<br>
+<a class="moz-txt-link-freetext" href="https://ostbelgienlive.be/desktopdefault.aspx/tabid-6233/10750_read-69226/">https://ostbelgienlive.be/desktopdefault.aspx/tabid-6233/10750_read-69226/</a><br>
+      <br>
+      Wir bleiben in Konfliktfällen, in denen wir beraten, neutral. Aus
+      diesem Grund kann ich Ihnen die E-Mail, die uns vom Anwalt der
+      Gegenpartei geschickt wurde, nicht weiterleiten.<br>
+      Ihr Anwalt kann auf Anfrage eine Kopie vom Anwalt der Gegenpartei
+      erhalten.<br>
+      <br>
+      Ich wünsche Ihnen, dass Sie in aller Ruhe zu einer Einigung
+      kommen. Wir werden nicht mehr tätig, sobald ein Anwalt
+      eingeschaltet wird. Wir stehen Ihnen weiterhin für alle anderen
+      Probleme zur Verfügung und verbleiben,<br>
+      <br>
+      mit freundlichen Grüßen,<br>
+      <br>
+      <br>
+      Sandra Brouwier<br>
+      Beraterin<br>
+      Conseillère<br>
+      <br>
+      Verbraucherschutzzentrale VoG<br>
+      Neustraße 119<br>
+      B-4700 Eupen<br>
+      Tel.: +32/87/59 18 50<br>
+      <a class="moz-txt-link-freetext" href="http://www.vsz.be">http://www.vsz.be</a><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      -----Message d'origine-----<br>
+      De : andrea <a class="moz-txt-link-rfc2396E" href="mailto:andreakearns09@gmail.com">&lt;andreakearns09@gmail.com&gt;</a> Envoyé : lundi 18
+      mars 2024 17:55<br>
+      À : Sandra Brouwier <a class="moz-txt-link-rfc2396E" href="mailto:sandra.brouwier@vsz.be">&lt;sandra.brouwier@vsz.be&gt;</a><br>
+      Objet : Mietsache Kearns<br>
+      <br>
+      Guten Tag Frau Brouwier,<br>
+      <br>
+      hier liegt wohl ein Missverständnis vor.<br>
+      <br>
+      Natürlich kann der Vermieter in die Wohnung um Schäden zu
+      begutachten etc. Auch passt uns der Termin mit der Firma
+      Leyendecker.<br>
+      <br>
+      Kennen Sie das Sprichwort "der Ton macht die Musik"? Wir empfinden
+      den Brief des Herrn Rombach als zutiefst unverschämt und voller
+      Lügen . Wir wollten nur wissen, ob man sich da wehren kann oder
+      solche Verleumdungen anhören muss, ohne etwas dagegen machen zu
+      können.<br>
+      <br>
+      Auch hat mein Mann in meinem Beisein Herrn Rombach seinerzeit
+      informiert, daß wir gerne eine funktionierende Heizung hätten und
+      kein Interesse an den Sonnenzellen haben. Wir haben nie ein
+      Einverständnis gegeben oder unterschrieben. Natürlich ist das
+      seine Sache, da es ja nicht unser Haus ist.<br>
+      <br>
+      Wir werden uns jetzt selber um einen Anwalt bemühen und bitten
+      Sie, uns deshalb das Schreiben des Anwalts des Vermieters komplett
+      zur Verfügung zu stellen.<br>
+      <br>
+      Was ist denn das Energiebüro? Hätten Sie da bitte eine Anschrift
+      bzw. Telefonnummer.<br>
+      <br>
+      Mit freundlichen Grüßen,<br>
+      <br>
+      Andrea und  Thomas Kearns<br>
+      <br>
+    </div>
+  </body>
+</html>
+
+--------------WARqBIe4KUyepPpmQ05e0EW2--

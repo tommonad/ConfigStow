@@ -1,0 +1,36 @@
+Date: Sun, 2 Jan 2022 16:45:03 +0100
+From: Tom Kearns <linux54@riseup.net>
+To: linux54@riseup.net
+Subject: test
+Message-ID: <20220102154459.5rojogrjwhdnfsjl@Monad>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="6ukxowc32ou6btlb"
+Content-Disposition: inline
+
+
+--6ukxowc32ou6btlb
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+HI dude dude
+
+--6ukxowc32ou6btlb
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAABCAAdFiEEfAv8hT7hMuO9AwK6gHT/4J+t5qQFAmHRyHcACgkQgHT/4J+t
+5qQFUQv/fCW3TkD6nCH9aIKqjkZ45l/WXAGvsPFnV+NSunukk+/UIJonNytg3LRF
+CsOjX4zy9USgXGw8R3Yq1uN8ZQIjPrIUFcuLZbxKItMeAzG91MwL5G5EE8JOBPZo
+UR5v97KcOBc0iRxBhMFWvp5mxHhtnWsyuewL9W+BddV4KmgXvoVYFT0Gnb1w6z78
+MkmhyLUIy21dSAU+W9cJdQbibIi5jwDFJdYdb5lYfYKBizJ7xcNHpOfL4Gfs7joz
+RD6X6ecTs0vns/TtiojSK9SLvq/mlM4PsFypq9L4IWODyfZ27DI2QNH9r3sNx9hm
+TtHdeBZk9matv7U9/DQwtKRKtmJH1iaAM6OMy99+XQ/xaADedizjy363zrarls1e
+S3kaK7R8jx+4Dmh/ECi/XT/qBYTtfNb+vnN8Z5NS5nvYqMM1MQ614mvZiqAdBFUn
+U+4YGflQLs463ERBhcNHV627mxzIAxNqYrzUDZZdsbFiZGnwi0nYxMhvYD6Lwulx
+cg6xpWgl
+=y35K
+-----END PGP SIGNATURE-----
+
+--6ukxowc32ou6btlb--

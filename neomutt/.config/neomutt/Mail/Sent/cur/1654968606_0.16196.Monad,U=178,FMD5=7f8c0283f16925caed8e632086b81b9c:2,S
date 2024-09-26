@@ -1,0 +1,36 @@
+Date: Sat, 11 Jun 2022 18:35:26 +0200
+From: Tom Kearns <linux54@riseup.net>
+To: sean.kearns1705@gmail.com
+Subject: song
+Message-ID: <20220611163523.2oznhpxhjarpuxsk@Monad>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="hd2rqqfinhpvglmi"
+Content-Disposition: inline
+
+
+--hd2rqqfinhpvglmi
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+https://www.youtube.com/watch?v=bpOSxM0rNPM
+
+--hd2rqqfinhpvglmi
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAABCAAdFiEEfAv8hT7hMuO9AwK6gHT/4J+t5qQFAmKkxEYACgkQgHT/4J+t
+5qQrjQv/VKU5QT/c/dG1ohtLPPjHSHw4mAuFELO5iyw3MNO1P+CqRhFDGnHaVIcw
+ZaiR/R49xuiMK0VHyYw5hgOdbc1PLxkkR+vDyr3msIW9OGmINFn8apBLZJ7H5V29
+Uuo0lv44sStJaZDgHKEtrlOENu2DErZVgIG/3Do4Krlh8wq/mdYY0GtpyS38Ap3o
+Yf0l7Z24FZQEF4Db2ilsCune0LhGqCF3i0z1hYPU+nABT2jThxQEtsuViRkhsSI2
+5nRrPhySFUKhpWSmwf1zyx/9tVCpwPSuusZQvi+89NFNyeuykPYyA0ppMs4C2MPq
+fHYC8sRqqNF2xrjPyETm2ogznml2Ob6AjSZJPXqF6/qdilx0FOGsAY1DyTJExKMi
+3sKFmeG3UEdxRG2tckTX4gOHMkwyYIKRxMlrSCA5r65o7I4k9dx8DbRNC+xp7of/
+wsTFKLUSRZD8J8c+oYuuY9Hl3wLFHKRENON+v0jXDsHAbI+oHMxm00IAiRqic+nD
+TuReI9Bz
+=1O22
+-----END PGP SIGNATURE-----
+
+--hd2rqqfinhpvglmi--

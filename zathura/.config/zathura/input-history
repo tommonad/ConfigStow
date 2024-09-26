@@ -1,0 +1,22 @@
+/libreof
+/fill
+/=sum
+/trim
+:toc
+:Toc
+:open /home/tom/Documents/Calibre/Linux/Admin/Christopher Negus/Linux Bible (3)
+:open /home/tom/Documents/Calibre/Linux/Admin/"Christopher Negus/Linux Bible (3)"
+:open /home/tom/Documents/Calibre/Literature/Oscar Wilde/The Wisdom of Oscar Wilde (18)
+:open /home/tom/Documents/Calibre/Literature/Oscar Wilde/The_Wisdom_of_Oscar_Wilde_(18)
+:open /home/tom/Documents/Calibre/Literature/Oscar\ Wilde/
+:open /home/tom/Documents/Calibre/Literature/Oscar Wilde/The_Wisdom_of_Oscar_Wilde_(18)/The_Wisdom_Of_Oscar_Wilde.epub
+:open /home/tom/Documents/Calibre/Literature/Oscar\ Wilde/The_Wisdom_of_Oscar_Wilde_(18)/The_Wisdom_of_Oscar_Wilde.epub
+:open /home/tom/Documents/Calibre/Linux/Admin/Christopher\ Negus/Linux\ Bible\ (3)/Linux\ Bible\ -\ Christopher\ Negus.pdf
+:open /home/tom/scripts/task_add.sh
+:open /home/tom/Documents/Calibre/Graphics/Adobe_Creative_Team
+:open /home/tom/Documents/Calibre/Graphics/Freecad_a_manual/freecad_a_manual_-_Van_Havre.pdf
+:badd
+:bmark
+:bmark %s
+:bdelete %s
+:blist

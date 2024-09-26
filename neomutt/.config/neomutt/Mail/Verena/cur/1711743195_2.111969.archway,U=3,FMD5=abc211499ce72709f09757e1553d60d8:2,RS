@@ -1,0 +1,137 @@
+Return-Path: <powerful-cells@web.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: 
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=0.8 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_LOW RBL: Sender listed at https://www.dnswl.org/,
+	*       low trust
+	*      [212.227.15.3 listed in dnswl.dnsbl]
+	*  0.8 BAYES_50 BODY: Bayes spam probability is 40 to 60%
+	*      [score: 0.5000]
+	*  0.1 NO_REAL_NAME From: does not include a real name
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [powerful-cells[at]web.de]
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	*  0.1 MIME_HTML_ONLY BODY: Message only has text/html MIME parts
+	* -0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [212.227.15.3 listed in wl.mailspike.net]
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	*  0.1 CK_KARD_SIZE short, card virus size - avoid matches in long
+	*      text
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	* -0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	*  0.0 KAM_SHORT Use of a URL Shortener for very short URL
+	*  0.1 TO_NOREAL no real name(s), maybe not list
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	* -0.0 T_SCC_BODY_TEXT_LINE No description available.
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+	 client-signature RSA-PSS (2048 bits) client-digest SHA256)
+	(Client CN "mx1.riseup.net", Issuer "R3" (not verified))
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4Qg4SY2FxPz62
+	for <linux54@riseup.net>; Mon, 12 Jun 2023 21:24:13 +0000 (UTC)
+Received: from mout.web.de (mout.web.de [212.227.15.3])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (P-256) server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4Qg4SX4phQzDqFt
+	for <linux54@riseup.net>; Mon, 12 Jun 2023 21:24:12 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (2048-bit key; secure) header.d=web.de header.i=powerful-cells@web.de header.a=rsa-sha256 header.s=s29768273 header.b=hxmnKGxK;
+	dkim-atps=neutral
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+ s=s29768273; t=1686605050; x=1687209850; i=powerful-cells@web.de;
+ bh=h38D7tseFbv8+sVo4JNUIdGySb0coYn2J+3Sfr8pyjk=;
+ h=X-UI-Sender-Class:From:To:Subject:Date;
+ b=hxmnKGxKy6p14C1rWhAjZUNukZAsb85M4FM3pkzIUo4u3Dz+STE+1OweNYSuQxBmpD53OV4
+ nirGpLja1Ct7eMxymw78c+PkvHunz7eg0+wqIU9MYU4vvZ+lJY08vruV7gqSXSpJg67ufaNAa
+ bye/oNVS63WIad48KRYsWaWtEURAmBHL1Om15o0faN163NpvHWE5w4PiqR2RYw0PE98+A/DsO
+ xYogk7wJlOPVRb2LdP4HhY/1Bp2H7+gvnc/O3yQFIJK4JJwDvzBrp7PNxK0UFTYoljU56Qr4N
+ 79ac9dv5vMF/eCTSpSphbZWwH0p3JKXBrTVboePXBf7mbM+XJ0Ng==
+X-UI-Sender-Class: 814a7b36-bfc1-4dae-8640-3722d8ec6cd6
+Received: from [3.70.99.0] ([3.70.99.0]) by web-mail.web.de
+ (3c-app-webde-bs31.server.lan [172.19.170.31]) (via HTTP); Mon, 12 Jun 2023
+ 23:24:10 +0200
+MIME-Version: 1.0
+Message-ID: <trinity-a288ee45-b5d9-42a7-b2d7-6b213236aa2a-1686605050804@3c-app-webde-bs31>
+From: powerful-cells@web.de
+To: linux54@riseup.net
+Subject: Freigabelink zu "Exchange"
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 12 Jun 2023 23:24:10 +0200
+Importance: normal
+Sensitivity: Normal
+X-Priority: 3
+X-Provags-ID: V03:K1:y8mDft8t2lx63cOm9pl44Ra+TlB6IvTvix5x5QWauYvVFvRBx1Ry5Wg/EYsPy02BwyDyt
+ ORAOMNbWuS9c/M0WfTaUV1BWGfIxE5VV9+FkWOoghJ9/ebGM+BJO4xt9YPHhdWlK9jQO34QEGBTK
+ FJJNAgyWcZJyT5VP6KWb+PSane1X1564kTuizdDH8GlFXJlahD/b8GUDVhpybTez1ThtWVOl5V8I
+ t8A1ycikGKv5uXf8sXcawEnvFmbAKWaAtrkY/Dn7p4s87U1qTZQmJXzjCDls/GsAS7Z1jE62sbb5
+ 1w=
+UI-OutboundReport: notjunk:1;M01:P0:VJKdq2W+A0U=;RJbkISjoBNPz/x/u9vXOtDLhgyf
+ zPlZ2pPZDygE2biMcc+ZW4ZxXiR0QDW59ZPO5tuAjXruHPsforWwFZkPkeFSAMn95vQ43Giu5
+ 32iR9w7hctoE+0o/6GMTCfvUumr658lcWIowraFySpM3m6IRgizOXPXNX3+ngWTB51N9ipPbU
+ QwlA/is/wocgGxTrR+1uUHKstZx7BmBFDlZcCyYX/8yXyq6B+lZymjvkI2pvY0se5MJ6zSfcg
+ wXotfm7F5iJlXTh8fUUqQPANVNQbBB2M4BkHPhoejGuY4fCQEFzRCVLx3EFAouOmvndqr3PJe
+ hwzfCDBNNP/i9nk7i/K8lSKJ29vRvJSmsaZ/JWEFaGI8M6GyJLg23/yDJkMxgsimtMioGUeYV
+ 09wldfowZFJhNYXvcuWekFkFMAxap2VaRF+5bntTheW8ACyW9Ray0LNdS4mlBgb9CLpckpXoJ
+ xN9GlvnIjySgVEL4ncJZzpnu7F76SK/6xqpw/Jr1nzKYCNlk+JT3rzpDazvkNBscSAZrStr3x
+ U2g+fqT9wCSRXQQZtKPaM/pgbUENGXaTJYem7Rq3tDIrGojWuCCLY8mzTKy2njSgSWc5aFjn1
+ ARsRbXaByLGSwCetuRDh1M81yCNmEbZIjgKlbv+L7brE1qZGEhehwXxnG2wk37YKnD4W6utO0
+ Me+jx47aGxXsuyH7HI2JURiLnWMHFRXP3C/aPmHUZ2ePyz37LyTOB52EW3yfAXKAda95im8gX
+ E5Hgc+qqfVYSr9npd99VVr2EHUxXzNMQeFg5x/ANywxTwrBeTutqgkOjtiyKzU5bVI09ssaLF
+ MAyCZXBMUNSEWFkxPsMDNX4XMotG7pr5Eh5EUyAeLgI9c=
+Content-Length: 1745
+
+<html><head></head><body><div style="font-family: Verdana;font-size: 12.0px;"><div>&nbsp;</div>
+<title></title>
+<meta charset="UTF-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/>
+<style type="text/css"><!--a {text-decoration: none; color:#707070} a:hover {text-decoration: underline;} .ellipsis {display: block; text-overflow: ellipsis; overflow:hidden; white-space: nowrap;}
+--></style>
+<div style="line-break: anywhere; word-break: break-all;">Hallo Tom,</div>
+
+<div style="line-break: anywhere; word-break: break-all;"><br/>
+Du hast eine WEB.DE Freigabe f&uuml;r den Ordner &quot;Exchange&quot; erhalten:</div>
+
+<div style="padding: 8px 8px 16px; margin-top: 8px; margin-bottom: 8px; background-color: #f3f3f3;">
+<table contenteditable="false" style="table-layout: fixed; width: 100%; font-size: 14px;">
+	<tbody>
+		<tr>
+			<td>
+			<div style="display: grid;"><span class="ellipsis" style="font-weight: bold;">Exchange</span></div>
+			<span>Ablaufdatum:&nbsp;</span><span>12.07.2023</span>
+
+			<div>Schreib- und Leserechte</div>
+
+			<div>Diese Freigabe ist passwortgesch&uuml;tzt. Um den Inhalt anzusehen, geben Sie bitte das Passwort ein, das Ihnen die Besitzerin oder der Besitzer schickt.</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="width: 100%; margin-left: 4px;"><a href="https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ" target="_blank">https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ</a></div>
+</div>
+
+<div>Ein Angebot der 1&amp;1 Mail &amp; Media GmbH</div>
+
+<div>&nbsp;</div>
+
+<div>Das ist jetzt der zweite Versuch &uuml;ber eine andere Plattform.<br/>
+<br/>
+Sch&ouml;nen Gru&szlig;</div>
+
+<div>&nbsp;</div>
+
+<div>Fritz und Verena</div></div></body></html>

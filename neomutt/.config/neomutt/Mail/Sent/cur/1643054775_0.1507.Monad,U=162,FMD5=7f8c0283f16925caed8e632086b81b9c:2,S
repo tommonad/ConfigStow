@@ -1,0 +1,150 @@
+Date: Fri, 17 Dec 2021 13:20:36 +0100
+From: Tom Kearns <linux54@riseup.net>
+To: sean.kearns1705@gmail.com
+Subject: Fwd: 
+Message-ID: <20211217122030.qxhcekmot6xhspee@Monad.localdomain>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="oi4vyh5jbo3d6jen"
+Content-Disposition: inline
+
+
+--oi4vyh5jbo3d6jen
+Content-Type: multipart/mixed; boundary="zfhv73qrlm45hjzf"
+Content-Disposition: inline
+
+
+--zfhv73qrlm45hjzf
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+
+--zfhv73qrlm45hjzf
+Content-Type: message/rfc822
+Content-Disposition: inline
+
+Return-Path: <schlufamimi@googlemail.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.4 (2020-01-24) on spoonbill.riseup.net
+X-Spam-Level: *****
+X-Spam-Pyzor: Whitelisted.
+X-Spam-Status: No, score=5.5 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.4
+X-Spam-Report: 
+	*  0.8 BAYES_50 BODY: Bayes spam probability is 40 to 60%
+	*      [score: 0.4970]
+	*  0.1 EMPTY_SUBJ Subject header present but only white space
+	*  0.2 KAM_BLANKSUBJECT Message has a blank Subject
+	*  0.3 NOMATCH_NICK_FROM From address with no part of name
+	* -0.1 NICK_TO Being sent to address with normal nick
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [schlufamimi[at]googlemail.com]
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.1 LINK_NR_TOP RAW: Short message with link near top
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	*  0.1 CK_KARD_SIZE short, card virus size - avoid matches in long
+	*      text
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -0.1 DCC_REPUT_13_19 DCC reputation between 13 and 19 %
+	* -0.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [209.85.221.53 listed in wl.mailspike.net]
+	*  2.6 PYZOR_CHECK Listed in Pyzor
+	*      (https://pyzor.readthedocs.io/en/latest/)
+	*  0.0 TVD_SPACE_RATIO No description available.
+	*  1.8 MISSING_SUBJECT Missing Subject: header
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+	 client-signature RSA-PSS (2048 bits) client-digest SHA256)
+	(Client CN "mx1.riseup.net", Issuer "R3" (not verified))
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4JFlrV6Km0z4r
+	for <linux54@riseup.net>; Fri, 17 Dec 2021 02:40:58 -0800 (PST)
+Received: from mail-wr1-f53.google.com (mail-wr1-f53.google.com [209.85.221.53])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+	 client-signature RSA-PSS (2048 bits) client-digest SHA256)
+	(Client CN "smtp.gmail.com", Issuer "GTS CA 1D4" (not verified))
+	by mx1.riseup.net (Postfix) with ESMTPS id 4JFlrV5dgyzF2Fj
+	for <linux54@riseup.net>; Fri, 17 Dec 2021 02:40:58 -0800 (PST)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (2048-bit key; unprotected) header.d=googlemail.com header.i=@googlemail.com header.b="Ki9ldUE6";
+	dkim-atps=neutral
+Received: by mail-wr1-f53.google.com with SMTP id i22so3110796wrb.13
+        for <linux54@riseup.net>; Fri, 17 Dec 2021 02:40:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20210112;
+        h=from:message-id:date:mime-version:user-agent:content-language:to
+         :content-transfer-encoding;
+        bh=ZanjLob6UPu9jNxNqXeVKK9g12PtMKRRaGjnhuZlk+k=;
+        b=Ki9ldUE68JJgfVKQIWD8sDhizDFl52x8GgJ6ePnQh0rHFGNFBsjk6h4UCnflaRil0x
+         xEpuL7FxZxMF3zte7OMe1Wa3ir+DH/G/g5hqg7/mEVcnj8vWSX0uFrLFR2oeAjEgzE0f
+         tsSKVpS01wOfhHjnLQ7bUV2ZtTen1ZEST47okKoEYHZfYP8joxfcv65RHfO7xf1PDqGZ
+         FsDH7bTKRF7uBA4MKm/GPcELz3oHS3SNL3lwoTGzthElpkLUWC3HUxUEqB6A8k1fKwkV
+         pWO3RGoSqHSWRzNSacEZm5HdmUCW8wrkuK09OewHvF7wNCMaEhVyEuPVXYHHC9WdyRp0
+         WYCw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:from:message-id:date:mime-version:user-agent
+         :content-language:to:content-transfer-encoding;
+        bh=ZanjLob6UPu9jNxNqXeVKK9g12PtMKRRaGjnhuZlk+k=;
+        b=iXDCI3EyykkZLTlglQlV2a4UZ07UOGI25prWO9RKhpKamBvHMj51k7TfcbKdUZ562P
+         aLJRNqwdBlmXfUFlnwFVnF35f+kfnvJelLSsEQyuTWh3t3p0WAVNf771+87Bup9ynZMV
+         W82XoswoMvXh8NLeDJkmVJeRV+/fQln/zs7cvSjlZF0vorr5jtaLVMlj9634xZz7+2YE
+         /SBDbFhkmLDRMcuB2WbElEP+avAh5z+NNg4CeoKlsw04+1roS8Ia5t7O9mnQY+0p1V3U
+         dJcQX9lBt8+LmZ64oKMSe966IghYVvMrZccTMUFTgAjlfKh0eDPu4V8W/JQ0CPel/03z
+         lCzQ==
+X-Gm-Message-State: AOAM533b8eGgQYE7LlRfQG6GrW5+mgVIUc033UPzv3DrMW8VwzCOG+9w
+	T8ggqi+9IMREPNVSO4cXFhgwro62mrQ=
+X-Google-Smtp-Source: ABdhPJzdTvonc4PtKVABZK7fngEIQLtvc5ujB5lj1TpbB1Eb9hpQGqQVnCrnvQhFbGFhL5mguKg5iw==
+X-Received: by 2002:a5d:6488:: with SMTP id o8mr2070468wri.630.1639737657343;
+        Fri, 17 Dec 2021 02:40:57 -0800 (PST)
+Received: from ?IPV6:2a02:a03f:acfd:8e00:9639:e5ff:feb7:594b? ([2a02:a03f:acfd:8e00:9639:e5ff:feb7:594b])
+        by smtp.gmail.com with ESMTPSA id u12sm7118099wrf.60.2021.12.17.02.40.56
+        for <linux54@riseup.net>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 17 Dec 2021 02:40:57 -0800 (PST)
+From: andrea <schlufamimi@googlemail.com>
+X-Google-Original-From: andrea <schlufamimi@gmail.com>
+Message-ID: <c7956b0b-8682-1d97-25a3-13be3dceda2a@gmail.com>
+Date: Fri, 17 Dec 2021 11:40:56 +0100
+MIME-Version: 1.0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101
+ Thunderbird/91.4.0
+Content-Language: en-US
+To: Tom Kearns <linux54@riseup.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: 
+
+https://www.amazon.de/gp/product/B08H1WCHQR/ref=ox_sc_act_title_1?smid=A249K4ONSHF6QJ&psc=1
+
+
+--zfhv73qrlm45hjzf--
+
+--oi4vyh5jbo3d6jen
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAABCAAdFiEEfAv8hT7hMuO9AwK6gHT/4J+t5qQFAmG8gIoACgkQgHT/4J+t
+5qTYNwv/RZ93fxVmM2PeY0hwCPDi4dPfrL57Ew70A0pJVncj07cWxptqaZqtKrja
+l8jryAr7EltjQh9kvYqVU281E7Ah3kZWNyx9Z+vGgnarNvYpKDT5H5g8tTc9DO8z
+fHoifpVbC1a6z25W23bnGdpf01zT9Zpsz85QFfvX6roTbfhjUsEHGZ36O1lIvBPs
+7F1eKPCI5OfqibpngKIvT42TfVaFKVuN45BIbIj7kFRysXh/chAKIsXGOKgWd1hY
+rKXnhQNyXkHeEvffWJjGZG2zari3Bn94nCTg1BqQfAM63cijdtJm5bwsktmf+qPq
+Zt9AgmqHqG0Zp+dN8+iWN5McFd7laOXGHyEy93HyBxCRS6hgE+Di4HlYTCugVLgW
+tGwXxQXoWuoF99uRVGMXiMNj7KV+b/cLnKn+onmz09a2YTQkdmWIBuji3mZojFV+
+yUvWt/L05iOaNxD5bef34Hzl1ABoWFiKws7uwIZzT4C5EXFdf5Ff0iy+To+hPC7P
+P6RMEmDr
+=DWDc
+-----END PGP SIGNATURE-----
+
+--oi4vyh5jbo3d6jen--

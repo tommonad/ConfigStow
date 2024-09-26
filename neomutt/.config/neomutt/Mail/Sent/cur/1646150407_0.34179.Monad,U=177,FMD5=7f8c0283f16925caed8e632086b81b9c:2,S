@@ -1,0 +1,36 @@
+Date: Tue, 1 Mar 2022 16:36:42 +0100
+From: Tom Kearns <linux54@riseup.net>
+To: sean.kearns1705@gmail.com
+Subject: number
+Message-ID: <20220301153639.t3t6t6f772fmnuyx@Monad>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="3irjf7aclyahff2n"
+Content-Disposition: inline
+
+
+--3irjf7aclyahff2n
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+087 22 88 47
+
+--3irjf7aclyahff2n
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAABCAAdFiEEfAv8hT7hMuO9AwK6gHT/4J+t5qQFAmIePYYACgkQgHT/4J+t
+5qTSIAwAtWdy5vIY0BLQ2jV/+LJTROrm/SC1Gm44nH+nuzNZoQ/9NHik6CwYGJYN
+ObW5LdUZq0KENTBfnhTcQuavgy2lkhrWprh6+qloHCOv+nInsphq2NfhbvPnAiI+
+MpHJyVXkrOcukiug7YMHgApPCOSEvoTjkkHx0xD2X7/vrRgMaKfACxWJ38BMth6d
+8UfKn4Ai5wv4Si4U8GjaVAbLGen1mIcgjIMWZIS1TP/DmpN604fsl8i4QOIXJpCn
+4OqNFVIArDlUJl3gjHiMsptfqSKkxD1TmNwzIsmcl1vCf9hYkaIbzKNKKHaPohJZ
+S+KzYx9qPCQIE0oJOdm7u5bDaWOTTAAqawgubXLkGJXSDOtTnbI+yhUhPIvese0h
+mHWHz9Ya12rVXPa3U5YbJ69DHRWaH+/K+45t8dmCC1N2T7ZqgICdu+/m3Mld1Ox3
+wnXhQJlnC4RWq8YRN5V3OK6aeYGghXgNtUAYQd6p0UM+54seHRXj862+Stmt6VNl
+XJYNixIY
+=EBkT
+-----END PGP SIGNATURE-----
+
+--3irjf7aclyahff2n--

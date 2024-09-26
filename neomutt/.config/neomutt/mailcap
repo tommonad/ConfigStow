@@ -1,0 +1,26 @@
+###
+### Begin Red Hat Mailcap
+###
+
+#audio/*; /usr/bin/xdg-open %s
+#
+#image/*; /usr/bin/xdg-open %s
+#
+##PDFs
+application/pdf; /usr/bin/xdg-open %s
+#application/postscript; /usr/bin/xdg-open %s
+#
+## HTML
+##text/html; "$BROWSER" %s; nametemplate=%s.html; test=test -n "%DISPLAY"
+##text/html; qutebrowser %s; needsterminal; nametemplate=%s.html
+#text/*; vim %s
+#
+text/plain; $EDITOR %s ;
+text/html; openfile %s ; nametemplate=%s.html
+text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput;
+image/*; openfile %s ;
+video/*; setsid mpv --quiet %s &; copiousoutput
+audio/*; mpv %s ;
+application/pdf; openfile %s ;
+application/pgp-encrypted; gpg -d '%s'; copiousoutput;
+application/pgp-keys; gpg --import '%s'; copiousoutput;

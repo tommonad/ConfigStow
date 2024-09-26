@@ -1,0 +1,96 @@
+# -----------------------------------------------------------------------------
+# wm independent hotkeys
+# -----------------------------------------------------------------------------
+# make sxhkd reload its configuration files:
+vi=nvim
+# Basic binds
+super + d ; {d,p,w,s}
+         {dmenu_run,passmenu,~/dmenu/webbm.sh,~/dmenu/search.sh}
+super + n ; {e,w}
+         st -e {neomutt,newsboat}
+super + r
+         $TERMINAL -e ranger
+
+super + w ; {f,t,b}
+         {~/dmenu/watchfilm.sh, \
+         ~/dmenu/watchtuts.sh, \
+        xdg-open https://www.youtube.com}
+
+# cmus volume control
+super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
+        {st -e cmus,st -e clyrics -c -L ~/Music/lyrics,\
+        cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
+        cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
+        cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
+
+# Pick screenshot type
+# shift + Print
+#         ~/bin/maimpick
+super + Print
+         ~/dmenu/dmscrot
+
+# Super + Function keys
+super + F1
+        st -e nvim  $HOME/vimwiki/journal_md/index.md
+super + F2
+        st -e nvim  $HOME/vimwiki/vimwiki_personal_md/index.md
+super + F3
+        st -e nvim $HOME/vimwiki/vimwiki_work_md/index.md
+super + F4
+        /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
+super + F8
+        st -e calcurse
+super + F9
+        libreoffice24.8
+super + F10
+        tixati
+# Luke smith's bookmarks for internet surfing or adding file paths
+# for fast insertion
+# Alt + keys
+alt + b
+         xdotool type $(grep  -v '^#' ~/.local/share/Bookmarks/snippets\
+         | dmenu -i -l 50 | cut -d' ' -f1)
+alt + Insert
+         exec $HOME/dmenu/bookmarked.sh
+
+alt + d
+         ~/dmenu/mydmenus.sh
+
+alt + e ; {b,e,t,s,o,g}
+         {xdg-open ~/Documents/Libreoffice/Berlingo/BerlingoReparatur.ods, \
+         xdg-open ~/Documents/Libreoffice/Electricity/Electricity.ods, \
+         xdg-open ~/Documents/Libreoffice/My_Stuff/MyTools.odb, \
+         xdg-open ~/Documents/Libreoffice/My_Stuff/Tools.ods, \
+         xdg-open ~/Documents/Libreoffice/My_Stuff/MyOffice.odb, \
+         xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods \
+         }
+alt + i
+         exec  picom -f
+alt + h
+         xdg-open ~/scripts/sxhkdrc.pdf
+alt + n
+         exec  pkill picom
+ctrl + shift + x
+         exec ~/dmenu/suresh.sh
+
+# # super + control + key
+super + ctrl + m
+         st -e /bin/pulsemixer
+
+# Volume control
+XF86AudioRaiseVolume
+         exec amixer set Master 5%+
+XF86AudioLowerVolume
+         exec amixer set Master 5%-
+XF86AudioMute
+         exec amixer set Master toggle
+XF86Calculator
+         exec  /usr/bin/galculator
+
+# Restart dwm
+ctrl + shift + q
+         pkill -RTMIN+8 dwm
+
+# Xrasengan to turn on displayport monitor
+ctrl + shift + m
+         xrasengan --try-reload-active-layout

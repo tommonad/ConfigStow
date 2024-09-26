@@ -1,0 +1,79 @@
+Return-Path: <noreply@github.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: 
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=-1.1 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_MED RBL: Sender listed at https://www.dnswl.org/,
+	*       medium trust
+	*      [192.30.252.203 listed in dnswl.dnsbl]
+	* -2.5 RCVD_IN_HOSTKARMA_W RBL: Sender listed in HOSTKARMA-WHITE
+	*      [192.30.252.203 listed in hostkarma.junkemailfilter.com]
+	*  0.0 PHISH_ACC2 BODY: Account details - common in genuine eBay
+	*  0.4 PHISH_ACC2B Account details - bank phishing subject
+	*  0.0 SPF_NONE SPF: sender does not publish an SPF Record
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.1 CK_KARD_SIZE short, card virus size - avoid matches in long
+	*      text
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	*  2.3 DCC_CHECK Detected as bulk mail by DCC (dcc-servers.net)
+	* -1.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [192.30.252.203 listed in wl.mailspike.net]
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	* -0.0 DKIMWL_WL_HIGH DKIMwl.org - High trust sender
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4X9rFc4x1Rz5h
+	for <linux54@riseup.net>; Sat, 21 Sep 2024 13:48:52 +0000 (UTC)
+Received: from out-20.smtp.github.com (out-20.smtp.github.com [192.30.252.203])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits))
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4X9rFc3DRhzDqVw
+	for <linux54@riseup.net>; Sat, 21 Sep 2024 13:48:52 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (1024-bit key; unprotected) header.d=github.com header.i=@github.com header.a=rsa-sha256 header.s=pf2023 header.b=Z/KLM1VI;
+	dkim-atps=neutral
+Received: from github.com (hubbernetes-node-d6b9ee8.va3-iad.github.net [10.48.222.65])
+	by smtp.github.com (Postfix) with ESMTPA id 5B44F8C075C
+	for <linux54@riseup.net>; Sat, 21 Sep 2024 06:48:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1726926531;
+	bh=dtVJ7dz0WmlgzRsNaZMXp+kdtyajTa8lvmx3pEjk0jI=;
+	h=Date:From:To:Subject:From;
+	b=Z/KLM1VI5WpHNwBQU0nXNjCZC9A2qJfu2m6r6duL2UN0b+IWLd9A3egXh3zlLTl0m
+	 LEGv3QjRHgPN3b5uCmWaD4WXe2ZJIToeI5rfUtZyPNcq9StjFo5xaWeGTmGVaiiu5H
+	 ZxjI/jC9lu2OZLPD9Dw9b7YizUy8niLIAgFdUL8g=
+Date: Sat, 21 Sep 2024 06:48:51 -0700
+From: GitHub <noreply@github.com>
+To: tommonad <linux54@riseup.net>
+Message-ID: <66eecec358336_9f1d2495975@lowworker-6c446d4bc8-8p6sf.mail>
+Subject: [GitHub] A new SSH authentication public key was added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+Content-Length: 260
+
+The following SSH key was added to your account:
+
+My-ssh-key
+SHA256:X4X3l15ll8Lan0VHudRNyqHmlXK34uSe7R/XIrFOOzM
+
+If you believe this key was added in error, you can remove the key and disable
+access at the following location:
+
+https://github.com/settings/keys

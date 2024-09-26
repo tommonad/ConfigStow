@@ -1,0 +1,81 @@
+Return-Path: <noreply@github.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: *
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=1.8 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_MED RBL: Sender listed at https://www.dnswl.org/,
+	*       medium trust
+	*      [192.30.252.200 listed in dnswl.dnsbl]
+	*  0.0 PHISH_ACC2 BODY: Account details - common in genuine eBay
+	*  0.4 PHISH_ACC2B Account details - bank phishing subject
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.0 SPF_NONE SPF: sender does not publish an SPF Record
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	*  0.1 CK_KARD_SIZE short, card virus size - avoid matches in long
+	*      text
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  2.3 DCC_CHECK Detected as bulk mail by DCC (dcc-servers.net)
+	*  0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [192.30.252.200 listed in wl.mailspike.net]
+	*  0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	* -0.0 DKIMWL_WL_HIGH DKIMwl.org - High trust sender
+	* -0.6 TXREP TXREP: Score normalizing based on sender's reputation
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4XBPJZ70c3z5X
+	for <linux54@riseup.net>; Sun, 22 Sep 2024 11:38:22 +0000 (UTC)
+Received: from out-17.smtp.github.com (out-17.smtp.github.com [192.30.252.200])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits))
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4XBPJZ5HWTzDqNr
+	for <linux54@riseup.net>; Sun, 22 Sep 2024 11:38:22 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (1024-bit key; unprotected) header.d=github.com header.i=@github.com header.a=rsa-sha256 header.s=pf2023 header.b=NUP9b5jL;
+	dkim-atps=neutral
+Received: from github.com (hubbernetes-node-5415cbc.va3-iad.github.net [10.48.130.45])
+	by smtp.github.com (Postfix) with ESMTPA id AD37F4E0070
+	for <linux54@riseup.net>; Sun, 22 Sep 2024 04:38:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1727005101;
+	bh=vFStX42VF1CRdzHFqgziwDJE4Rfwjve/PwydRnOxWxw=;
+	h=Date:From:To:Subject:From;
+	b=NUP9b5jLWOuJAcg/itYOveq0hofRP5OehuioHI+E/xK9F9+37UWbTVeyAAl4J+ZZP
+	 jBtsO37prM9MyAlT2eRea4K8Yn4+w5V/qz0PLxNkk1/xwZxOIs8/StMURMVt9RbkHT
+	 SpAQjDuD27MiewGZm7TmsEkI4yThZE/zFRBd7+q0=
+Date: Sun, 22 Sep 2024 04:38:21 -0700
+From: GitHub <noreply@github.com>
+To: tommonad <linux54@riseup.net>
+Message-ID: <66f001adab3a6_7a1d241057e9@lowworker-6bd45555bf-dmgf8.mail>
+Subject: [GitHub] A personal access token (classic) has been added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+Content-Length: 404
+
+Hey tommonad!
+
+A personal access token (classic) "Toms-access-token2" with repo scope was recently added to your account. Visit https://github.com/settings/tokens for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+

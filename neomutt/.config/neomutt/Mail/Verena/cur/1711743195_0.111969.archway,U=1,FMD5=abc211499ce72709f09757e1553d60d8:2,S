@@ -1,0 +1,154 @@
+Return-Path: <powerful-cells@web.de>
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on spoonbill.riseup.net
+X-Spam-Level: 
+X-Spam-Pyzor: Reported 0 times.
+X-Spam-Status: No, score=-0.1 required=7.0 shortcircuit=no autolearn=disabled
+	version=3.4.6
+X-Spam-Report: 
+	* -0.0 RCVD_IN_DNSWL_LOW RBL: Sender listed at https://www.dnswl.org/,
+	*       low trust
+	*      [212.227.15.3 listed in dnswl.dnsbl]
+	*  0.1 NO_REAL_NAME From: does not include a real name
+	* -0.1 NICK_TO Being sent to address with normal nick
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [powerful-cells[at]web.de]
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	*  0.1 MIME_HTML_ONLY BODY: Message only has text/html MIME parts
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 CK_419SIZE typical 419 size - avoid matches in long text
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	* -0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [212.227.15.3 listed in wl.mailspike.net]
+	* -0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	* -0.1 AM_TRUNCATED Compensate on large message for misfiring rules
+	*  0.0 KAM_SHORT Use of a URL Shortener for very short URL
+	*  0.0 TXREP TXREP: Score normalizing based on sender's reputation
+Delivered-To: linux54@riseup.net
+Received: from mx1.riseup.net (mx1-pn.riseup.net [10.0.1.33])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by spoonbill.riseup.net (Postfix) with ESMTPS id 4RQhmW3KTJz5T
+	for <linux54@riseup.net>; Wed, 16 Aug 2023 08:55:23 +0000 (UTC)
+Received: from mout.web.de (mout.web.de [212.227.15.3])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (P-256) server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx1.riseup.net (Postfix) with ESMTPS id 4RQhmV5xmWzDqfl
+	for <linux54@riseup.net>; Wed, 16 Aug 2023 08:55:22 +0000 (UTC)
+Authentication-Results: mx1.riseup.net;
+	dkim=pass (2048-bit key; secure) header.d=web.de header.i=powerful-cells@web.de header.a=rsa-sha256 header.s=s29768273 header.b=eRwOZHLU;
+	dkim-atps=neutral
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
+ s=s29768273; t=1692176120; x=1692780920; i=powerful-cells@web.de;
+ bh=VUB8WL2bWJAUWUyqGMurE+ZAoNltTCI/r7awwyK8kV0=;
+ h=X-UI-Sender-Class:From:To:Subject:Date:In-Reply-To:References;
+ b=eRwOZHLUiGNI9V7CXDtcBve1Tb2YYq2mZr+Er/vqpsNt7f8CfWruzUeE7W70aMe6brNIjVh
+ eu3+KtJ8wm2/H7IT0j7DAULhVV0UUtFVLUysBzEfSWsRSy5HleQgc9vyicCEYAPE4yKP0MFL5
+ Wf+7z1g9GjzaCNd86R06r6/zw2Z4Z66SlvCPTpC1IoG1pWBvvXpZX8qfX/BuIzNnUqCziQ1xN
+ 5fu4pvmL/bnfzZYEM4QltTKp5B6xa6rWoKVCs2Yw3I+YdN9Du9qBY2/LyvcpSjb+CRUnD+ecl
+ yNTzEY5NS4pXwxLuXkx9cqgaxLKLLTHCn0KxuHON8N7jp0DSHSVA==
+X-UI-Sender-Class: 814a7b36-bfc1-4dae-8640-3722d8ec6cd6
+Received: from [176.199.184.253] ([176.199.184.253]) by web-mail.web.de
+ (3c-app-webde-bs15.server.lan [172.19.170.15]) (via HTTP); Wed, 16 Aug 2023
+ 10:55:20 +0200
+MIME-Version: 1.0
+Message-ID: <trinity-61d2738f-e144-4b12-b527-2e5ca8cada2d-1692176120503@3c-app-webde-bs15>
+From: powerful-cells@web.de
+To: Tom Kearns <linux54@riseup.net>
+Subject: Aw: Re: Freigabelink zu "Exchange"
+Content-Type: text/html; charset=UTF-8
+Date: Wed, 16 Aug 2023 10:55:20 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <r3l65otopmdvigo2kzs2eue7ddyp2azqh67yyn2g7xtbooobf2@og45ybjjaccs>
+References: <trinity-a288ee45-b5d9-42a7-b2d7-6b213236aa2a-1686605050804@3c-app-webde-bs31>
+ <r3l65otopmdvigo2kzs2eue7ddyp2azqh67yyn2g7xtbooobf2@og45ybjjaccs>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K1:svfmFNQKfu9YVtZ7xV/EWBByYafG3Je6jm0SIk16rxZNv1UCdL3XORmDhBCYLLwyDEFFk
+ 5nTbKoEfwrve1QWN/BSz4+GEjacGopSC+aJBKw82hn320pgcS81abS8BwSFBjfEFlxgFNifEptqG
+ +U306+3pfETDtbsie4YU29+HS0RUfswWPascMjFamXpR8IAU703fDmp+TrDS7iGW3j5CeTsOWnPK
+ ydZVA1aYMBGyY4vGYn33eDLOpMkPqy8/0rj6V1GTKowXT3jB1gD54/xiUV+u+MWIwOjunSUQ8/Wb
+ WM=
+UI-OutboundReport: notjunk:1;M01:P0:EjMyqR8PuG4=;d9q3qdF5YfUWcmaTETKo7nuyqR9
+ cldXOxbdbEqqllPkUTQqI2Fdf3wrInehJKPlTYaczns13b4luKLuJcFIG2F3+GtUlF8nQyKst
+ lnNsuBqzUrOj3I6QPEg6R9nB13ZsawUjS6P3uoHvFeZFMTTpEYNllIXdQxgijrDGO95sGP5/y
+ hKcq6MgxlWKZs5t2xECrHTm1BbeHdk3j7ctC0dun3/OpTQIIDjeRO0uhphTm3lVB20XDiB+j5
+ 1PII0n7qq23N7r5xIqdimmluM0lVM2q2RnCdeh7vGUT+fFSXOh4IHWkyku92cl2VcnvieVpSg
+ KauSxeZo1V0YV7fFIXgmoQK8p56411DiliBMreDXPh5BIQ97Yyc5qXP7d1CurzHFlaI/lCoLp
+ EYHlWpCuPd501h28nBwKBrc7Y/JgUG7g656BgHbC2EyxO7GFBGYqCnAkUs8+lf6aBm7MztU1E
+ M3dc0pnoghcmQna8XonjCIF+sD6gUahBj0drm8l46YZtIFDKx05k81oHYsEbcluGOwA195k4z
+ nvEKcFXRwxVRveDd8aGbDZNO1+6ALqL9Y2oOQeuOgNMr+SwnNnKFHhuwB07nfDD2dXssBTMNs
+ NEoQ3ouF8XZ7S25/qUmSHeHTgCShmwN92TdLnkBef086DnZ8dNeB7MMVyNmAzyRUXCyckxQMT
+ V37Scfnvef8V8izuc4bQ8SQU1OXTN3XanDSzMGexWn1c4SHUXEYFYzFEGXKxkEOGcjXC347r5
+ fimojpwKOSfQuV/wdz//e+zi5t1LpWrgSjupJEzB3o4rVKfCwv2G/K7iJcMWNB8Y6JXWSCFaE
+ IUTDKC4JPw34IeZCWNhIZdlg==
+Content-Length: 2454
+
+<html><head></head><body><div style="font-family: Verdana;font-size: 12.0px;"><div>Hallo Tom,&nbsp;<br/>
+<br/>
+entschuldige, dass ich mich so sp&auml;t erst wieder&nbsp;bei Dir melde. Ich hatte einfach so viel um die Ohren.&nbsp;<br/>
+<br/>
+Ich w&uuml;rde mich freuen, wenn Du wie gehabt die Vortragsfolien, die ich bis heute Abend schicke,&nbsp;in die richtige Reihenfolge in einer pdf speichern k&ouml;nntest. Die Referenzen sind in der Regel die letzte Folie. Manchmal fehlt die Titelfolie.&nbsp;<br/>
+<br/>
+Melde Dich gerne, wenn Du Fragen hast.&nbsp;<br/>
+<br/>
+Seid Ihr mit Haussuche weiter gekommen?&nbsp;<br/>
+<br/>
+LG an die ganze Familie</div>
+
+<div>&nbsp;
+<div>&nbsp;
+<div name="quote" style="margin:10px 5px 5px 10px; padding: 10px 0 10px 10px; border-left:2px solid #C3D9E5; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="margin:0 0 10px 0;"><b>Gesendet:</b>&nbsp;Mittwoch, 14. Juni 2023 um 18:19 Uhr<br/>
+<b>Von:</b>&nbsp;&quot;Tom Kearns&quot; &lt;linux54@riseup.net&gt;<br/>
+<b>An:</b>&nbsp;powerful-cells@web.de<br/>
+<b>Betreff:</b>&nbsp;Re: Freigabelink zu &quot;Exchange&quot;</div>
+
+<div name="quoted-content">On 12/Jun/23 (Mon) 23:24, powerful-cells@web.de wrote:<br/>
+Hallo Verena und Fritz,<br/>
+<br/>
+den ersten Versuch habe ich hochgeladen.<br/>
+<br/>
+Viele Gruesse<br/>
+<br/>
+Tom<br/>
+&gt;<br/>
+&gt; Hallo Tom,<br/>
+&gt;<br/>
+&gt; Du hast eine WEB.DE Freigabe f&uuml;r den Ordner &quot;Exchange&quot; erhalten:<br/>
+&gt;<br/>
+&gt; Exchange<br/>
+&gt; Ablaufdatum: 12.07.2023<br/>
+&gt; Schreib- und Leserechte<br/>
+&gt; Diese Freigabe ist passwortgesch&uuml;tzt. Um den Inhalt anzusehen, geben<br/>
+&gt; Sie bitte das Passwort ein, das Ihnen die Besitzerin oder der Besitzer<br/>
+&gt; schickt.<br/>
+&gt; [1]<a href="https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ" target="_blank">https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ</a><br/>
+&gt;<br/>
+&gt; Ein Angebot der 1&amp;1 Mail &amp; Media GmbH<br/>
+&gt;<br/>
+&gt;<br/>
+&gt;<br/>
+&gt; Das ist jetzt der zweite Versuch &uuml;ber eine andere Plattform.<br/>
+&gt; Sch&ouml;nen Gru&szlig;<br/>
+&gt;<br/>
+&gt;<br/>
+&gt;<br/>
+&gt; Fritz und Verena<br/>
+&gt;<br/>
+&gt; References<br/>
+&gt;<br/>
+&gt; 1. <a href="https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ" target="_blank">https://c.web.de/@1126899002336352064/WdicFLgESGqqrbFWpdtzOQ</a></div>
+</div>
+</div>
+</div></div></body></html>
