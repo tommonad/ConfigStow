@@ -1,6 +1,8 @@
 ^%~
-nvim/.config/nvim/undodir/
+nvim/.config/nvim/undodir
 cmus/.config/cmus/cache
 cmus/.config/cmus/lib.pl
 cmus/.config/cmus/search-history
+cmus/.config/cmus/command-history
+nvim/.config/nvim/plugin
 

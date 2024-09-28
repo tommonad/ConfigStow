@@ -1,8 +1,8 @@
 # You can add comments to these files with #
 cc   ~/.config/cmus
 cf   ~/.config
-cfn   ~/.config/nvim
-cfN   ~/.config/neomutt
+cfn  ~/.config/nvim
+cfN  ~/.config/neomutt
 cz   ~/.config/zsh
 et   /etc
 hD   ~/Downloads
@@ -11,7 +11,7 @@ hb   ~/bin
 hd   ~/Documents
 hh   ~/
 hk   ~/vimwiki/vimwiki_work_md
-hl   ~/Lyrics
+hly   ~/Music/lyrics/
 hlo  ~/Documents/Libreoffice/
 hm	 ~/Music/My_Popular_Music
 hp	 ~/Pictures
@@ -23,7 +23,7 @@ i3b  ~/.config/i3blocks
 lS   ~/.local/share
 lb   ~/.local/bin
 lt   ~/.local/share/Trash/files
-ra   ~/.config/ranger
+a   ~/.config/ranger
 ro   /
 rs   /usr/share/
 ru   /usr

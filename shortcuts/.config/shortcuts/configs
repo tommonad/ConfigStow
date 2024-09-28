@@ -6,9 +6,9 @@ cfdw   ~/.config/suckless/dwm/config.h
 cffo   ~/.config/shortcuts/folders
 cfnb   ~/.config/newsboat/config
 cfnp   ~/.config/nvim/lua/tom/packer.lua
-cfnr   ~/.config/nvim/lua/tom/remap.lua
+cfnR   ~/.config/nvim/lua/tom/remap.lua
 cfns   ~/.config/nvim/lua/tom/set.lua
-cfra   ~/.config/ranger/rc.conf
+cfnr   ~/.config/ranger/rc.conf
 cfri   ~/.config/ranger/rifle.conf
 cfrs   ~/.config/ranger/plugins/scope.sh
 cfsc   ~/scripts/shortcuts.sh

@@ -8,7 +8,7 @@ vim.cmd([[
   augroup end
 
   augroup shell_shortcuts
-    autocmd BufWritePost ~/.config/shortcuts/configs,~/.config/shortcuts/folders !bash shortcuts.sh 
+    autocmd BufWritePost ~/.config/shortcuts/configs,~/.config/shortcuts/folders !bash my_shortcuts
   augroup end
 
   augroup sxhkd_reload
