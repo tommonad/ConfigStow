@@ -1,40 +1,46 @@
 # You can add comments to these files with #
-cc   ~/.config/cmus
-cf   ~/.config
-cfn  ~/.config/nvim
-cfN  ~/.config/neomutt
-cz   ~/.config/zsh
-et   /etc
+cc    ~/.config/cmus
+cfc   ~/.config
+cfn   ~/.config/nvim
+cfN   ~/.config/neomutt
+cfse  ~/.config/surfraw/elvi
+cfz   ~/.config/zsh
+cfwm  ~/.config/suckless/dwm
+cfra  ~/.config/ranger
+cfst  ~/.config/suckless/st
+#-------------------------------------------------------------------------------
 hD   ~/Downloads
 hW   ~/Work
 hb   ~/bin
 hd   ~/Documents
 hh   ~/
 hk   ~/vimwiki/vimwiki_work_md
-hly   ~/Music/lyrics/
+hly  ~/Music/lyrics/
 hlo  ~/Documents/Libreoffice/
-hm	 ~/Music/My_Popular_Music
-hp	 ~/Pictures
-hs	 ~/scripts
+hm   ~/Music/My_Popular_Music
+hp   ~/Pictures
+hs   ~/scripts
 ht   ~/tolino
 hu   ~/dmenu
 hw   ~/Wallpapers
-i3b  ~/.config/i3blocks
 lS   ~/.local/share
 lb   ~/.local/bin
 lt   ~/.local/share/Trash/files
-a   ~/.config/ranger
+#-------------------------------------------------------------------------------
 ro   /
+rb   /boot
+et   /etc
 rs   /usr/share/
 ru   /usr
-sf   ~/.config/surfraw/elvi
+rv   /var
+#-------------------------------------------------------------------------------
 tO   /mnt/data/Tutorials/LibreOffice/
 td   /mnt/data
-tf   /mnt/media/MyMovies
 tg   /mnt/data/Tutorials/Guitar/
 tl   /mnt/data/Tutorials/LinuxTutorials
-tm   /mnt/media
 to   /mnt/data/Torrents
 tt   /mnt/data/Tutorials
-wm   ~/.config/suckless/dwm
-wt   ~/.config/suckless/st
+#-------------------------------------------------------------------------------
+tf   /mnt/media/MyMovies
+tm   /mnt/media
+#-------------------------------------------------------------------------------

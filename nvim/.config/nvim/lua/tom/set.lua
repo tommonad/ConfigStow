@@ -7,19 +7,27 @@ vim.cmd([[
     autocmd BufWinEnter *.md silent! loadview
   augroup end
 
-  augroup shell_shortcuts
-    autocmd BufWritePost ~/.config/shortcuts/configs,~/.config/shortcuts/folders !bash my_shortcuts
-  augroup end
+  "augroup shell_shortcuts
+  "  autocmd BufWritePost ~/.config/shortcuts/configs,~/.config/shortcuts/folders !bash ~/scripts/shortcuts.sh
+  "augroup end
 
   augroup sxhkd_reload
     autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd; setsid sxhkd -m1 &
   augroup end
-  
+
 abb _me linux54@riseup.net
 abb _ba #!/usr/bin/env bash
 let g:table_mode_corner='|'
 filetype plugin on
 ]])
+
+vim.api.nvim_create_augroup("shell_shortcuts", { clear = true })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = { "~/.config/shortcuts/configs", "~/.config/shortcuts/folders" },
+    command = "silent! !bash ~/scripts/shortcuts.sh",
+    group = "shell_shortcuts"
+})
 
 vim.o.number = true
 vim.o.relativenumber = true

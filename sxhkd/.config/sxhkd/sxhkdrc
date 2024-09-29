@@ -70,7 +70,7 @@ alt + h
          xdg-open ~/scripts/sxhkdrc.pdf
 alt + n
          exec  pkill picom
-ctrl + shift + x
+alt + comma
          exec ~/dmenu/suresh.sh
 
 # # super + control + key
