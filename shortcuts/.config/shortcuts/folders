@@ -4,6 +4,7 @@ cfc   ~/.config
 cfn   ~/.config/nvim
 cfN   ~/.config/neomutt
 cfse  ~/.config/surfraw/elvi
+cfsh  ~/.config/shortcuts
 cfz   ~/.config/zsh
 cfwm  ~/.config/suckless/dwm
 cfra  ~/.config/ranger
