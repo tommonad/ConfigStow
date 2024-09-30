@@ -31,7 +31,8 @@ xrandr --output DP-1 --mode 1920x1080 --rate 60 --primary --output DVI-I-1 --mod
 
 # Random wallpapers
 feh --bg-scale --randomize ~/Wallpapers/* &
-[[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
+[[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap 
+xset r rate 180 50 &
 xset -dpms &
 # start some nice programs
 picom  &
