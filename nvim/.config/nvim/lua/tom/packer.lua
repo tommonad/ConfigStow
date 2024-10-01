@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('tpope/vim-surround')
@@ -23,6 +22,16 @@ return require('packer').startup(function(use)
   use('nvim-lualine/lualine.nvim')
   use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
 
+-- lazy.lua plugin configuration for lazygit
+ use{
+  "kdheepak/lazygit.nvim",   -- Add lazygit plugin
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { noremap = true, silent = true })
+  end
+ }
   use {
     'rcarriga/nvim-notify',
     config = function()
