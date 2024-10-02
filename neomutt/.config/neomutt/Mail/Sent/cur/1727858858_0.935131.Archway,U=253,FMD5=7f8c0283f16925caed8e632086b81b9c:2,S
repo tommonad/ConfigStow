@@ -1,0 +1,38 @@
+Date: Wed, 2 Oct 2024 10:47:11 +0200
+From: Tom Kearns <linux54@riseup.net>
+To: linux54@riseup.net
+Subject: test
+Message-ID: <7rjiibgypik3tvsxdmybdxptyrloxig3bpkxsdvxvoj7wy2ow2@mjs6wquedyec>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="swil6hhlszwia7rk"
+Content-Disposition: inline
+
+
+--swil6hhlszwia7rk
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Test encrypted
+
+--swil6hhlszwia7rk
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCAAdFiEEoyVSCwxj/XP/wU+UigU9cloRUuEFAmb9CIQACgkQigU9cloR
+UuGIORAAnB4fTMUdRZgjgTNnGCIAkxPSuaNhGQjyw96AzNbXxS/UML+L9iM2siES
+yDVKH9JbUStGnMlLEtfD6PG/Cvy00PmVV9u1DZ3QVC2/YuxasIDG62tAbMqGkzyo
+tAhDykSSk1KeQzvHx4lpobA2vHxkdS1tLMT/TWI8cUdkUh4ndrNsggGmI38Y0MY7
+0jzyQkqCylV81CIvyj8hDb9Pv494UMMLU6aMsl9RuHkaB54Hd2cvybs+WR0KDoT1
+MdntyWYfkoxYYJmxictqcmnJ1HOm7rBgVbpbUHhV5T132SnkpAlHrT8NGetNfKtl
+k+qcXbbe9qwYIoxweW9ssXxW5mjOKagtDSZsg8IKgj0xdIuONK14CmrHLR8VGzVM
+1KI2fV2wcZvtp8gb+GGJMJcRhorD0b7eZ9VeTrRiBeBFNhVhto6bp3+/Ak7kg91K
+pRzO2Mei5/qXhqFcNQMRY/Axv2rPuBIwGW5BpFc/psbjbujcAj/Tsk+rhEXVJhWB
+MBJOVPIpnnlN+uROiS9wCR2AILiUBVXXpt7Vy+ELB5erbJIBeYTABuWlEEP//tzY
+xOXJ8hLPQM0RnaZdgZuWNKHonTXTdApp368+3GByw9ksaO5/MWLdgyc+KapO1CBT
+aGWXqH3rviExM4AJZNACTkoTIp9zNCDnAcZ/tNj4bbAi/ghRTPY=
+=FKAa
+-----END PGP SIGNATURE-----
+
+--swil6hhlszwia7rk--
