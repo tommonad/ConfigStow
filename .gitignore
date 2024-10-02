@@ -7,3 +7,4 @@ cmus/.config/cmus/command-history
 nvim/.config/nvim/plugin
 neomutt/.config/neomutt/net.riseup.linux54/cache/
 neomutt/.config/neomutt/Mail
+neomutt/.config/neomutt/safe
