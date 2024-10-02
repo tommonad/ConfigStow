@@ -30,22 +30,6 @@ bind pager \031 previous-line		# Mouse wheel
 bind pager \005 next-line		# Mouse wheel
 bind editor <Tab> complete-query
 
-# Navigation
-macro index,pager gd "<change-folder>=Drafts<enter>" "goto Drafts"
-macro index,pager gt "<change-folder>=Trash<enter>" "goto Trash"
-macro index,pager Mt ";<save-message>=Trash<enter>" "move to Trash"
-macro index,pager gi "<change-folder>=INBOX<enter>" "goto inbox"
-macro index,pager gm "<change-folder>=Important<enter>" "goto Important"
-macro index,pager Mm ";<save-message>=Important<enter>" "move to Important"
-macro index,pager gs "<change-folder>=Sent<enter>" "goto sent"
-macro index,pager Ms ";<save-message>=Sent<enter>" "move to Sent"
-macro index,pager gp "<change-folder>=Spam<enter>" "goto spam"
-macro index,pager Mp ";<save-message>=Spam<enter>" "move to Spam"
-macro index,pager gf "<change-folder>=Drafts<enter>" "goto spam"
-macro index,pager gr "<change-folder>=Rombach<enter>" "goto Rombach"
-macro index,pager Mr ";<save-message>=Rombach<enter>" "move to Rombach"
-macro index,pager ge "<change-folder>=Verena<enter>" "goto Verena"
-macro index,pager Me ";<save-message>=Verena<enter>" "move to Verena"
 
 # sidebar mappings
 bind index,pager \Ck sidebar-prev
