@@ -23,3 +23,5 @@ exit
 st -e bash -c 'echo "$TERM_FONT"'
 echo $TERM_FONT
 exit
+sudo chroot /mnt/media
+exit
