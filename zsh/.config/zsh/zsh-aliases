@@ -243,10 +243,6 @@ alias vrem="virsh undefine $1 --remove-all-storage"
 # gnome-polkit command
 alias gpl="/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 
-# Thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
-
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 alias cd="z"
