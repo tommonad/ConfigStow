@@ -182,7 +182,7 @@ alias merge="xrdb -merge ~/.Xresources"
 
 #!/bin/sh
 alias f='zi'
-alias g='lazygit'
+alias lg='lazygit'
 alias gad="git add -A"
 alias gst='git status'
 alias gcm="git commit -m"
