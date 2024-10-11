@@ -5,15 +5,15 @@
 vi=nvim
 # Basic binds
 super + d ; {d,p,w,s}
-         {dmenu_run,passmenu,~/dmenu/webbm.sh,~/dmenu/search.sh}
+         {dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
 super + n ; {e,w}
          st -e {neomutt,newsboat}
 super + r
          $TERMINAL -e ranger
 
 super + w ; {f,t,b}
-         {~/dmenu/watchfilm.sh, \
-         ~/dmenu/watchtuts.sh, \
+         {~/.dmenu/watchfilm.sh, \
+         ~/.dmenu/watchtuts.sh, \
         xdg-open https://www.youtube.com}
 
 # cmus volume control
@@ -27,7 +27,7 @@ super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
 # shift + Print
 #         ~/bin/maimpick
 super + Print
-         ~/dmenu/dmscrot
+         ~/.dmenu/dmscrot
 
 # Super + Function keys
 super + F1
@@ -51,10 +51,10 @@ alt + b
          xdotool type $(grep  -v '^#' ~/.local/share/Bookmarks/snippets\
          | dmenu -i -l 50 | cut -d' ' -f1)
 alt + Insert
-         exec $HOME/dmenu/bookmarked.sh
+         exec $HOME/.dmenu/bookmarked.sh
 
 alt + d
-         ~/dmenu/mydmenus.sh
+         exec $HOME/.dmenu/mydmenus.sh
 
 alt + e ; {b,e,t,s,o,g}
          {xdg-open ~/Documents/Libreoffice/Berlingo/BerlingoReparatur.ods, \
@@ -65,13 +65,15 @@ alt + e ; {b,e,t,s,o,g}
          xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods \
          }
 alt + i
-         exec  picom -f
+         exec  picom
 alt + h
          xdg-open ~/scripts/sxhkdrc.pdf
 alt + n
          exec  pkill picom
 alt + comma
-         exec ~/dmenu/suresh.sh
+         exec ~/.dmenu/suresh.sh
+alt + period  
+         exec xkill
 
 # # super + control + key
 super + ctrl + m
@@ -90,7 +92,3 @@ XF86Calculator
 # Restart dwm
 ctrl + shift + q
          pkill -RTMIN+8 dwm
-
-# Xrasengan to turn on displayport monitor
-ctrl + shift + m
-         xrasengan --try-reload-active-layout
