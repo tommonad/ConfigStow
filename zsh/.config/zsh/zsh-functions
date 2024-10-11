@@ -32,7 +32,7 @@ function zsh_add_completion() {
 
 # Got this from luke
 # Open config and scripts with fuzzy finder
-se() {du -a ~/bin/* ~/dmenu/* ~/scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+se() {du -a ~/.bin/* ~/.dmenu/* ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 # Open only files with editor
 vf() { fzf | xargs -r -I % $EDITOR % ;}
 c() {cp -v "$1" "$(awk '{print $2}' ~/.config/shortcuts/folders | fzf | sed "s|~|$HOME|")" ;}

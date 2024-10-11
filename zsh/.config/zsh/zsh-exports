@@ -15,11 +15,10 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
 export SUDO_ASKPASS=/usr/lib/ssh/ssh-askpass
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/bin/Typon:$PATH
+export PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.bin/Typon:$PATH
 export PATH=/bin:$PATH
-export PATH=$HOME/dmenu:$PATH
-export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/.dmenu:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$JAVA_HOME/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
@@ -39,8 +38,8 @@ eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
 
-# Add all subdirectories of $HOME/scripts to PATH
-for dir in "$HOME/scripts"/*; do
+# Add all subdirectories of $HOME/.scripts to PATH
+for dir in "$HOME/.scripts"/*; do
   if [ -d "$dir" ]; then
     PATH="$dir:$PATH"
   fi
