@@ -10,3 +10,5 @@ neomutt/.config/neomutt/Mail
 neomutt/.config/neomutt/safe
 offlineimap/.config/offlineimap
 bash/.bash_history
+ranger/.config/ranger/plugins/
+ranger/.config/ranger/__pycache__/
