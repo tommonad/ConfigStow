@@ -1,5 +1,5 @@
 # [Created by task 3.1.0 8/26/2024 08:35:09]
-data.location=/home/tom/.task
+data.location=/home/tom/.config/task
 news.version=3.1.0
 
 # To use the default location of the XDG directories,
