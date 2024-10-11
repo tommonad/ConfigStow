@@ -3,6 +3,7 @@ cc    ~/.config/cmus
 cfc   ~/.config
 cfn   ~/.config/nvim
 cfN   ~/.config/neomutt
+cfp   ~/.config/picom
 cfse  ~/.config/surfraw/elvi
 cfsh  ~/.config/shortcuts
 cfz   ~/.config/zsh
@@ -12,7 +13,7 @@ cfst  ~/.config/suckless/st
 #-------------------------------------------------------------------------------
 hD   ~/Downloads
 hW   ~/Work
-hb   ~/bin
+hb   ~/.bin
 hd   ~/Documents
 hh   ~/
 hk   ~/vimwiki/vimwiki_work_md
@@ -20,9 +21,9 @@ hly  ~/Music/lyrics/
 hlo  ~/Documents/Libreoffice/
 hm   ~/Music/My_Popular_Music
 hp   ~/Pictures
-hs   ~/scripts
+hs   ~/.scripts
 ht   ~/tolino
-hu   ~/dmenu
+hu   ~/.dmenu
 hw   ~/Wallpapers
 lS   ~/.local/share
 lb   ~/.local/bin
