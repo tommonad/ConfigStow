@@ -103,6 +103,7 @@ alias xmod="xmodmap ~/.config/X11/xmodmap"
 alias au="yay -Syu --noconfirm"
 alias upgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias suin="sudo make clean install"
+alias mkinit="sudo mkinitcpio -P"
 
 #check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
@@ -138,17 +139,14 @@ ex ()
 alias v="nvim"
 alias vdm="nvim  ~/.config/dmenu/config.h"
 alias vgrub="sudo vim /etc/default/grub"
-alias vi3="nvim ~/.config/i3/config"
-alias vi3b="nvim ~/.config/i3blocks/config"
 alias vmirrorlist="sudo vim /etc/pacman.d/mirrorlist"
 alias vmkinitcpio="sudo vim /etc/mkinitcpio.conf"
+alias vxorg="sudo vim /etc/X11/xorg.conf"
 alias vmpd="nvim ~/.config/mpd/mpd.conf"
 alias vneo="nvim ~/.config/neomutt/neomuttrc"
-alias vnvi="nvim ~/.config/nvim/lua/mynvim/set.lua"
+alias vnvi="nvim ~/.config/nvim/lua/tom/set.lua"
 alias vmpv="nvim ~/.config/mpv/mpv.conf"
 alias vmpvi="nvim ~/.config/mpv/input.conf"
-alias vncm="nvim ~/.config/ncmpcpp/bindings"
-alias vncmc="nvim ~/.config/ncmpcpp/config"
 alias vnew="nvim ~/.config/newsboat/config"
 alias vpac="sudo vim /etc/pacman.conf"
 alias vpic="nvim ~/.config/picom/picom.conf"
@@ -178,7 +176,7 @@ alias opus="yt-dlp -f bestaudio --extract-audio --audio-format opus --audio-qual
 alias ytdlp="yt-dlp -viUf 'bv*[height=1080]+ba'"
 
 # merge new settings
-alias merge="xrdb -merge ~/.Xresources"
+alias merge="xrdb  ~/.config/X11/xresources"
 
 #!/bin/sh
 alias f='zi'
