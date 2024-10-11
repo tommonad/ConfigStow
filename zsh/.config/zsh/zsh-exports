@@ -29,6 +29,7 @@ source /usr/bin/virtualenvwrapper.sh
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk/"
 # export SAL_USE_VCLPLUGIN=gtk4
 export LD_LIBRARY_PATH="/usr/lib/jvm/java-17-openjdk/lib:$LD_LIBRARY_PATH"
+export PATH=$HOME:/home/tom/.scripts:$PATH
 
 # Cleaned home dir with these
 
@@ -37,7 +38,6 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/yarnrc"'
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 # eval "`pip completion --zsh`"
-
 # Add all subdirectories of $HOME/.scripts to PATH
 for dir in "$HOME/.scripts"/*; do
   if [ -d "$dir" ]; then

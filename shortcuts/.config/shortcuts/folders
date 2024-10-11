@@ -1,15 +1,17 @@
 # You can add comments to these files with #
-cc    ~/.config/cmus
-cfc   ~/.config
-cfn   ~/.config/nvim
-cfN   ~/.config/neomutt
-cfp   ~/.config/picom
-cfse  ~/.config/surfraw/elvi
-cfsh  ~/.config/shortcuts
-cfz   ~/.config/zsh
-cfwm  ~/.config/suckless/dwm
-cfra  ~/.config/ranger
-cfst  ~/.config/suckless/st
+ccf   ~/.config
+ccm    ~/.config/cmus
+cnv   ~/.config/nvim
+cno   ~/.config/neomutt
+cne   ~/.config/newsboat
+cpi   ~/.config/picom
+cse  ~/.config/surfraw/elvi
+csh  ~/.config/shortcuts
+czs   ~/.config/zsh
+cwm  ~/.config/suckless/dwm
+cba  ~/.config/suckless/dwm-bar
+cra  ~/.config/ranger
+cst  ~/.config/suckless/st
 #-------------------------------------------------------------------------------
 hD   ~/Downloads
 hW   ~/Work
@@ -24,6 +26,7 @@ hp   ~/Pictures
 hs   ~/.scripts
 ht   ~/tolino
 hu   ~/.dmenu
+hv   ~/.vim
 hw   ~/Wallpapers
 lS   ~/.local/share
 lb   ~/.local/bin
@@ -31,13 +34,13 @@ lt   ~/.local/share/Trash/files
 #-------------------------------------------------------------------------------
 ro   /
 rb   /boot
-et   /etc
+rd   /mnt/data
+re   /etc
 rs   /usr/share/
 ru   /usr
 rv   /var
 #-------------------------------------------------------------------------------
 tO   /mnt/data/Tutorials/LibreOffice/
-td   /mnt/data
 tg   /mnt/data/Tutorials/Guitar/
 tl   /mnt/data/Tutorials/LinuxTutorials
 to   /mnt/data/Torrents

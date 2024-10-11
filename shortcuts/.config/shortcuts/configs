@@ -8,7 +8,7 @@ cfnb   ~/.config/newsboat/config
 cfnp   ~/.config/nvim/lua/tom/packer.lua
 cfnR   ~/.config/nvim/lua/tom/remap.lua
 cfns   ~/.config/nvim/lua/tom/set.lua
-cfnr   ~/.config/ranger/rc.conf
+cfrr   ~/.config/ranger/rc.conf
 cfri   ~/.config/ranger/rifle.conf
 cfrs   ~/.config/ranger/plugins/scope.sh
 cfsc   ~/scripts/shortcuts.sh
