@@ -12,7 +12,9 @@ cwm  ~/.config/suckless/dwm
 cba  ~/.config/suckless/dwm-bar
 cra  ~/.config/ranger
 cst  ~/.config/suckless/st
+cxr  ~/.config/X11
 #-------------------------------------------------------------------------------
+hc   ~/Configstow
 hD   ~/Downloads
 hW   ~/Work
 hb   ~/.bin
