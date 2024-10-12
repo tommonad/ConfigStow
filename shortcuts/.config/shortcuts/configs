@@ -1,22 +1,35 @@
-cfba   ~/.bashrc
-cfbm   ~/.config/surfraw/bookmarks
-cfco   ~/.config/shortcuts/configs
-cfdu   ~/.config/dunst/dunstrc
-cfdw   ~/.config/suckless/dwm/config.h
-cffo   ~/.config/shortcuts/folders
-cfnb   ~/.config/newsboat/config
-cfnp   ~/.config/nvim/lua/tom/packer.lua
-cfnR   ~/.config/nvim/lua/tom/remap.lua
-cfns   ~/.config/nvim/lua/tom/set.lua
-cfrr   ~/.config/ranger/rc.conf
-cfri   ~/.config/ranger/rifle.conf
-cfrs   ~/.config/ranger/plugins/scope.sh
-cfsc   ~/scripts/shortcuts.sh
-cfst   ~/.config/suckless/st/config.h
-cfu    ~/.config/newsboat/urls
-cfx    ~/.config/sxhkd/sxhkdrc
-cfza   ~/.config/zsh/zsh-aliases
-cfze   ~/.config/zsh/zsh-exports
-cfzf   ~/.config/zsh/zsh-functions
-cfzs   ~/.config/zsh/zsh-shortcuts
-cfzz   ~/.config/zsh/.zshrc
+#-------------------------------------------------------------------------------
+################################################################################
+#-------------------------------------------------------------------------------
+
+vba   ~/.bashrc
+vbm   ~/.config/surfraw/bookmarks
+vco   ~/.config/shortcuts/configs
+vdu   ~/.config/dunst/dunstrc
+vdw   ~/.config/suckless/dwm/config.h
+vfo   ~/.config/shortcuts/folders
+vnR   ~/.config/nvim/lua/tom/remap.lua
+vnb   ~/.config/newsboat/config
+vnp   ~/.config/nvim/lua/tom/packer.lua
+vns   ~/.config/nvim/lua/tom/set.lua
+vri   ~/.config/ranger/rifle.conf
+vrr   ~/.config/ranger/rc.conf
+vrs   ~/.config/ranger/plugins/scope.sh
+vst   ~/.config/suckless/st/config.h
+vnu    ~/.config/newsboat/urls
+vsx    ~/.config/sxhkd/sxhkdrc
+vza   ~/.config/zsh/zsh-aliases
+vze   ~/.config/zsh/zsh-exports
+vzf   ~/.config/zsh/zsh-functions
+vzs   ~/.config/zsh/zsh-shortcuts
+vzz   ~/.config/zsh/.zshrc
+
+#-------------------------------------------------------------------------------
+################################################################################
+#-------------------------------------------------------------------------------
+
+vsc   ~/scripts/shortcuts.sh
+
+#-------------------------------------------------------------------------------
+################################################################################
+#-------------------------------------------------------------------------------
