@@ -37,6 +37,7 @@ lt   ~/.local/share/Trash/files
 ro   /
 rb   /boot
 rd   /mnt/data
+rB   /mnt/data/BackUps
 re   /etc
 rs   /usr/share/
 ru   /usr
