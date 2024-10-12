@@ -8,7 +8,7 @@ vco   ~/.config/shortcuts/configs
 vdu   ~/.config/dunst/dunstrc
 vdw   ~/.config/suckless/dwm/config.h
 vfo   ~/.config/shortcuts/folders
-vnR   ~/.config/nvim/lua/tom/remap.lua
+vnr   ~/.config/nvim/lua/tom/remap.lua
 vnb   ~/.config/newsboat/config
 vnp   ~/.config/nvim/lua/tom/packer.lua
 vns   ~/.config/nvim/lua/tom/set.lua
