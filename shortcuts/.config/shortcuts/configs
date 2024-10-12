@@ -6,7 +6,6 @@ vba   ~/.bashrc
 vbm   ~/.config/surfraw/bookmarks
 vco   ~/.config/shortcuts/configs
 vdu   ~/.config/dunst/dunstrc
-vdw   ~/.config/suckless/dwm/config.h
 vfo   ~/.config/shortcuts/folders
 vnr   ~/.config/nvim/lua/tom/remap.lua
 vnb   ~/.config/newsboat/config
@@ -15,7 +14,9 @@ vns   ~/.config/nvim/lua/tom/set.lua
 vri   ~/.config/ranger/rifle.conf
 vrr   ~/.config/ranger/rc.conf
 vrs   ~/.config/ranger/plugins/scope.sh
+vsd   ~/.config/suckless/dmenu/config.h
 vst   ~/.config/suckless/st/config.h
+vsw   ~/.config/suckless/dwm/config.h
 vnu    ~/.config/newsboat/urls
 vsx    ~/.config/sxhkd/sxhkdrc
 vza   ~/.config/zsh/zsh-aliases
