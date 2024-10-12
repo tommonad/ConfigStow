@@ -16,11 +16,11 @@ set ssl_starttls  = "yes"
 
 # receive
 set imap_user = "linux54@riseup.net"
-set imap_pass = "JBuFzm9GHvXgyeBJ"
+set imap_pass = ""
 set mbox_type = Maildir
 set folder    = "~/.config/neomutt/Mail"
 set imap_check_subscribed
-set smtp_pass = "JBuFzm9GHvXgyeBJ"
+set smtp_pass = ""
 set mailcap_path="~/.config/neomutt/mailcap"
 set smtp_authenticators = 'gssapi:login'
 
