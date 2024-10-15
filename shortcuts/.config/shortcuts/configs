@@ -1,7 +1,6 @@
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-
 vba   ~/.bashrc
 vbm   ~/.config/surfraw/bookmarks
 vco   ~/.config/shortcuts/configs
@@ -14,23 +13,25 @@ vns   ~/.config/nvim/lua/tom/set.lua
 vri   ~/.config/ranger/rifle.conf
 vrr   ~/.config/ranger/rc.conf
 vrs   ~/.config/ranger/plugins/scope.sh
+vrS   ~/.config/ranger/shortcuts.conf
+vmc   ~/.config/mpv/mpv.conf
+vmi   ~/.config/mpv/input.conf
 vsd   ~/.config/suckless/dmenu/config.h
 vst   ~/.config/suckless/st/config.h
 vsw   ~/.config/suckless/dwm/config.h
-vnu    ~/.config/newsboat/urls
-vsx    ~/.config/sxhkd/sxhkdrc
+vnu   ~/.config/newsboat/urls
+vsx   ~/.config/sxhkd/sxhkdrc
 vza   ~/.config/zsh/zsh-aliases
 vze   ~/.config/zsh/zsh-exports
 vzf   ~/.config/zsh/zsh-functions
+vzh   ~/.local/share/zsh/history
 vzs   ~/.config/zsh/zsh-shortcuts
 vzz   ~/.config/zsh/.zshrc
-
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-
 vsc   ~/.scripts/shortcuts.sh
-
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
+vxo   /etc/X11/xorg.conf

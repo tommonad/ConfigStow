@@ -31,7 +31,9 @@ hlo  ~/Documents/Libreoffice/
 hm   ~/Music/My_Popular_Music
 hp   ~/Pictures
 hs   ~/.scripts
-ht   ~/tolino
+ht   ~/Tutorials
+htl  ~/Tutorials/LinuxTutorials
+htg  ~/Tutorials/Guitar
 hu   ~/.dmenu
 hv   ~/.vim
 hw   ~/Wallpapers
