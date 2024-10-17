@@ -21,6 +21,7 @@ vst   ~/.config/suckless/st/config.h
 vsw   ~/.config/suckless/dwm/config.h
 vnu   ~/.config/newsboat/urls
 vsx   ~/.config/sxhkd/sxhkdrc
+vzt   ~/.config/zathura/zathurarc
 vza   ~/.config/zsh/zsh-aliases
 vze   ~/.config/zsh/zsh-exports
 vzf   ~/.config/zsh/zsh-functions
