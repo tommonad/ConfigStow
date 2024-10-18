@@ -1,38 +1,38 @@
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-vba   ~/.bashrc
-vbm   ~/.config/surfraw/bookmarks
-vco   ~/.config/shortcuts/configs
-vdu   ~/.config/dunst/dunstrc
-vfo   ~/.config/shortcuts/folders
-vnr   ~/.config/nvim/lua/tom/remap.lua
-vnb   ~/.config/newsboat/config
-vnp   ~/.config/nvim/lua/tom/packer.lua
-vns   ~/.config/nvim/lua/tom/set.lua
-vri   ~/.config/ranger/rifle.conf
-vrr   ~/.config/ranger/rc.conf
-vrs   ~/.config/ranger/plugins/scope.sh
-vrS   ~/.config/ranger/shortcuts.conf
-vmc   ~/.config/mpv/mpv.conf
-vmi   ~/.config/mpv/input.conf
-vsd   ~/.config/suckless/dmenu/config.h
-vst   ~/.config/suckless/st/config.h
-vsw   ~/.config/suckless/dwm/config.h
-vnu   ~/.config/newsboat/urls
-vsx   ~/.config/sxhkd/sxhkdrc
-vzt   ~/.config/zathura/zathurarc
-vza   ~/.config/zsh/zsh-aliases
-vze   ~/.config/zsh/zsh-exports
-vzf   ~/.config/zsh/zsh-functions
-vzh   ~/.local/share/zsh/history
-vzs   ~/.config/zsh/zsh-shortcuts
-vzz   ~/.config/zsh/.zshrc
+nba   ~/.bashrc
+nbm   ~/.config/surfraw/bookmarks
+nco   ~/.config/shortcuts/configs
+ndu   ~/.config/dunst/dunstrc
+nfo   ~/.config/shortcuts/folders
+nnr   ~/.config/nvim/lua/tom/remap.lua
+nnb   ~/.config/newsboat/config
+nnp   ~/.config/nvim/lua/tom/packer.lua
+nns   ~/.config/nvim/lua/tom/set.lua
+nri   ~/.config/ranger/rifle.conf
+nrr   ~/.config/ranger/rc.conf
+nrs   ~/.config/ranger/plugins/scope.sh
+nrS   ~/.config/ranger/shortcuts.conf
+nmc   ~/.config/mpv/mpv.conf
+nmi   ~/.config/mpv/input.conf
+nsd   ~/.config/suckless/dmenu/config.h
+nst   ~/.config/suckless/st/config.h
+nsw   ~/.config/suckless/dwm/config.h
+nnu   ~/.config/newsboat/urls
+nsx   ~/.config/sxhkd/sxhkdrc
+nzt   ~/.config/zathura/zathurarc
+nza   ~/.config/zsh/zsh-aliases
+nze   ~/.config/zsh/zsh-exports
+nzf   ~/.config/zsh/zsh-functions
+nzh   ~/.local/share/zsh/history
+nzs   ~/.config/zsh/zsh-shortcuts
+nzz   ~/.config/zsh/.zshrc
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-vsc   ~/.scripts/shortcuts.sh
+nsc   ~/.scripts/shortcuts.sh
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-vxo   /etc/X11/xorg.conf
+nxo   /etc/X11/xorg.conf

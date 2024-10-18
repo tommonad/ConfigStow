@@ -18,7 +18,7 @@ super + w ; {f,t,b}
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
-        {st -e cmus,st -e clyrics -c -L ~/Music/lyrics,\
+        {st -e cmus,st -e lyrics, \
         cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
         cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
         cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
