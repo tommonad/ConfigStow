@@ -2,20 +2,20 @@
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-ccf   ~/.config
-ccm    ~/.config/cmus
-cnv   ~/.config/nvim
-cno   ~/.config/neomutt
-cne   ~/.config/newsboat
-cpi   ~/.config/picom
-cse  ~/.config/surfraw/elvi
-csh  ~/.config/shortcuts
-czs   ~/.config/zsh
-cwm  ~/.config/suckless/dwm
-cba  ~/.config/suckless/dwm-bar
-cra  ~/.config/ranger
-cst  ~/.config/suckless/st
-cxr  ~/.config/X11
+cf   ~/.config
+cm    ~/.config/cmus
+nv   ~/.config/nvim
+no   ~/.config/neomutt
+ne   ~/.config/newsboat
+pi   ~/.config/picom
+se  ~/.config/surfraw/elvi
+sh  ~/.config/shortcuts
+zs   ~/.config/zsh
+wm  ~/.config/suckless/dwm
+ba  ~/.config/suckless/dwm-bar
+ra  ~/.config/ranger
+st  ~/.config/suckless/st
+xr  ~/.config/X11
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
@@ -52,14 +52,6 @@ re   /etc
 rs   /usr/share/
 ru   /usr
 rv   /var
-#-------------------------------------------------------------------------------
-################################################################################
-#-------------------------------------------------------------------------------
-tO   /mnt/data/Tutorials/LibreOffice/
-tg   /mnt/data/Tutorials/Guitar/
-tl   /mnt/data/Tutorials/LinuxTutorials
-to   /mnt/data/Torrents
-tt   /mnt/data/Tutorials
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
