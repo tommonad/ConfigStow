@@ -38,6 +38,8 @@ super + F3
         st -e nvim $HOME/vimwiki/vimwiki_work_md/index.md
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
+super + F7
+        /usr/bin/freecad
 super + F8
         st -e calcurse
 super + F9

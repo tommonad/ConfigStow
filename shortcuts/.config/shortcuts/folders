@@ -2,19 +2,19 @@
 #-------------------------------------------------------------------------------
 ################################################################################
 #-------------------------------------------------------------------------------
-cf   ~/.config
-cm    ~/.config/cmus
-nv   ~/.config/nvim
-no   ~/.config/neomutt
-ne   ~/.config/newsboat
-pi   ~/.config/picom
-se  ~/.config/surfraw/elvi
+cf  ~/.config
+cm  ~/.config/cmus
+nv  ~/.config/nvim
+no  ~/.config/neomutt
+ne  ~/.config/newsboat
+pi  ~/.config/picom
+sl  ~/.config/surfraw/elvi
 sh  ~/.config/shortcuts
-zs   ~/.config/zsh
+zs  ~/.config/zsh
+wb  ~/.config/suckless/dwm-bar
 wm  ~/.config/suckless/dwm
-ba  ~/.config/suckless/dwm-bar
+wt  ~/.config/suckless/st
 ra  ~/.config/ranger
-st  ~/.config/suckless/st
 xr  ~/.config/X11
 #-------------------------------------------------------------------------------
 ################################################################################
@@ -32,9 +32,11 @@ hlo  ~/Documents/Libreoffice/
 hm   ~/Music/My_Popular_Music
 hp   ~/Pictures
 hs   ~/.scripts
-htu   ~/Tutorials
+hto  ~/Torrents
+htu  ~/Tutorials
 htl  ~/Tutorials/LinuxTutorials
 htg  ~/Tutorials/Guitar
+htG  ~/Tutorials/GraphicApplications
 htO  ~/Tutorials/LibreOffice
 hu   ~/.dmenu
 hv   ~/.vim

@@ -14,6 +14,7 @@ Vri   ~/.config/ranger/rifle.conf
 Vrr   ~/.config/ranger/rc.conf
 Vrs   ~/.config/ranger/plugins/scope.sh
 VrS   ~/.config/ranger/shortcuts.conf
+Vlf   ~/.config/lf/lfrc
 Vmc   ~/.config/mpv/mpv.conf
 Vmi   ~/.config/mpv/input.conf
 Vsd   ~/.config/suckless/dmenu/config.h
@@ -21,6 +22,7 @@ Vst   ~/.config/suckless/st/config.h
 Vsw   ~/.config/suckless/dwm/config.h
 Vnu   ~/.config/newsboat/urls
 Vsx   ~/.config/sxhkd/sxhkdrc
+Vpc   ~/.config/picom/picom.conf
 Vzt   ~/.config/zathura/zathurarc
 Vza   ~/.config/zsh/zsh-aliases
 Vze   ~/.config/zsh/zsh-exports

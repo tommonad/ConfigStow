@@ -37,12 +37,6 @@ se() {du -a ~/.bin/* ~/.dmenu/* ~/.scripts/* ~/.config/* | awk '{print $2}' | fz
 vf() { fzf | xargs -r -I % $EDITOR % ;}
 c() {cp -v "$1" "$(awk '{print $2}' ~/.config/shortcuts/folders | fzf | sed "s|~|$HOME|")" ;}
 
-function mach_java_mode() {
-    #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-    export SDKMAN_DIR="$HOME/.sdkman"
-    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-}
-
 function cpu_usage() {
   ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head
 }
