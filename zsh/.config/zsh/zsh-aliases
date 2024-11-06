@@ -1,0 +1,250 @@
+# Shutdown,reboot and sleep
+alias fcc="sudo fc-cache -fv"
+alias ff="fastfetch"
+alias sle="systemctl suspend"
+alias SS="sudo systemctl"
+alias src="source ~/.config/zsh/.zshrc"
+alias upg="update-system"
+alias updb="sudo updatedb"
+# Pacman
+alias  p="sudo pacman"
+alias pu="sudo pacman -Syu --noconfirm"
+alias ppa="pacman -Qqen > ~/Work/arch_packages.txt"
+alias paur="pacman -Qqem > ~/Work/My_Install_scripts/aur_packages.txt"
+alias ka="killall"
+alias kb="xset r rate "
+alias refm="sudo reflector -c Belgium,Germany -a 12 --sort rate --save /etc/pacman.d/mirrorlist"
+alias ssn="sudo shutdown now"
+alias srb="sudo reboot"
+alias prob="journalctl -p 3 -xb"
+alias hist="history 1"
+alias cat="bat"
+alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
+alias kdwm="pkill -RTMIN+8 dwm"
+alias Gc="xprop | grep "CLASS""
+
+
+# Boot into the bios without having to smash the buttons
+alias sleu="systemctl reboot --firmware-setup"
+
+# Mail
+alias rise="/usr/bin/offlineimap -o"
+
+# List files
+alias ll="eza --color=always --icons=always -lah"
+alias l.="eza -AdG --color=always --icons=always .* "
+alias ls="eza --long --git --no-time --no-user --no-permissions --no-filesize --colour=always --icons=always"
+
+# Fzf
+alias inv='nvim $(fzf --preview="bat --color=always {} ")'
+alias arch-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias psfzf="ps axc | fzf"
+
+
+# systemd
+alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
+
+alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
+# Trash
+alias tpu="trash-put"
+alias tli="trash-list"
+alias tem="trash-empty"
+alias tre="trash-restore"
+
+alias ZQ="exit"
+alias cl="clear"
+
+# Touch typing for the cli
+alias tpo="typon"
+
+# Mount user harddrive
+alias mm="mount /mnt/media"
+alias um="umount /mnt/media"
+alias mu="mount /mnt/usb"
+alias uu="umount /mnt/usb"
+alias sm="sudo mount -o uid=1000,gid=1000"
+alias du="du -h"
+
+# Sansa clip
+alias msa="simple-mtpfs --device 1 -o uid=1000 /home/tom/tolino"
+alias usa="fusermount -u /home/tom/tolino"
+
+# Python environment
+alias pipinstall="$HOME/myvenv/bin/pip3.11 install"
+alias cht="curl cheat.sh/ "
+
+# Lf file manager
+alias lf="lfub" 
+
+# Tasks apps
+alias  T="task"
+alias Tw="task waiting"
+alias Ta="task_add.sh"
+alias Tc="task calendar"
+alias Tl="task list"
+# alias Td="task rm "$1"" # don't know what that mean (i forgot)
+alias Tr="task ready"
+
+# Python activate to install packages pip install package after activate
+alias pa="source ~/myvenv/bin/activate"
+alias pd="deactivate"
+
+# Radio stations
+
+alias r1="myvenv/bin/radio --play Q102"
+alias rse="myvenv/bin/radio --search"
+
+# Weather
+alias wet="curl https://www.wttr.in/Eynatten"
+alias cal="cal -3"
+
+# Keyboard
+alias xmod="xmodmap ~/.config/X11/xmodmap"
+
+# Update{{{
+alias au="yay -Syu --noconfirm"
+alias upgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias suin="sudo make clean install"
+
+#check vulnerabilities microcode
+alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
+
+# # ex = EXtractor for all kinds of archives{{{
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+	  *.deb)       ar x $1      ;;
+	  *.tar.xz)    tar xf $1   ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+
+# Config aliases
+alias v="nvim"
+alias vdm="nvim  ~/.config/dmenu/config.h"
+alias vgrub="sudo vim /etc/default/grub"
+alias vi3="nvim ~/.config/i3/config"
+alias vi3b="nvim ~/.config/i3blocks/config"
+alias vmirrorlist="sudo vim /etc/pacman.d/mirrorlist"
+alias vmkinitcpio="sudo vim /etc/mkinitcpio.conf"
+alias vmpd="nvim ~/.config/mpd/mpd.conf"
+alias vneo="nvim ~/.config/neomutt/neomuttrc"
+alias vnvi="nvim ~/.config/nvim/lua/mynvim/set.lua"
+alias vmpv="nvim ~/.config/mpv/mpv.conf"
+alias vmpvi="nvim ~/.config/mpv/input.conf"
+alias vncm="nvim ~/.config/ncmpcpp/bindings"
+alias vncmc="nvim ~/.config/ncmpcpp/config"
+alias vnew="nvim ~/.config/newsboat/config"
+alias vpac="sudo vim /etc/pacman.conf"
+alias vpic="nvim ~/.config/picom/picom.conf"
+alias vqute="nvim ~/.config/qutebrowser/config.py"
+alias vquteb="nvim ~/.config/qutebrowser/quickmarks"
+alias vqutec="nvim ~/.config/qutebrowser/config.py"
+alias vrang="nvim ~/.config/ranger/rc.conf"
+alias vzsh="nvim ~/.config/zsh/.zshrc"
+alias vzsha="nvim ~/.config/zsh/zsh-aliases"
+alias vzshe="nvim ~/.config/zsh/zsh-exports"
+alias vzshf="nvim ~/.config/zsh/zsh-functions"
+alias vzshp="nvim ~/.config/zsh/zsh-prompt"
+
+# regex reference
+alias regref="perldoc perlreref"
+
+#Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+
+# youtube-dl
+#alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+
+alias opus="yt-dlp -f bestaudio --extract-audio --audio-format opus --audio-quality 0"
+# alias yta-best="yt-dlp --extract-audio --audio-format best "
+#alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+#alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias ytdlp="yt-dlp -viUf 'bv*[height=1080]+ba'"
+
+# merge new settings
+alias merge="xrdb -merge ~/.Xresources"
+
+#!/bin/sh
+alias f='zi'
+alias lg='lazygit'
+alias gad="git add -A"
+alias gst='git status'
+alias gcm="git commit -m"
+alias gpu="git push"
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias vimrc='vim ~/.config/vim/'
+
+# get fastest mirrors
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -iv"
+alias mv='mv -i'
+alias rm='rm -Iv'
+
+# easier to read disk
+alias df='pydf -h'     # human-readable sizes
+alias free='free -h' # show sizes in MB
+
+# Maintenance
+alias cj="sudo journalctl --vacuum-time=2weeks"
+
+# gpg encryption
+# verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+# For when keys break
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+
+# Surfraw
+alias sraw="surfraw archwiki $arg"
+alias srpb="surfraw piratebay $arg"
+
+# Printer
+alias lpst="lpstat -p"
+
+# Network address
+alias ip="ip -c a"
+
+# Virsh command for virtual machines
+alias vli="sudo virsh list --all"
+alias vsta="sudo virsh start"
+alias vreb="sudo virsh reboot"
+alias vsus="sudo virsh suspend"
+alias vshu="sudo virsh shutdown"
+alias vrem="virsh undefine $1 --remove-all-storage"
+
+# gnome-polkit command
+alias gpl="/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
+alias cd="z"
