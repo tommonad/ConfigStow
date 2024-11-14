@@ -39,7 +39,7 @@ super + F3
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
 super + F7
-        /usr/bin/freecad
+        $HOME/.scripts/FreeCAD-0.21.2-Linux-x86_64.AppImage
 super + F8
         st -e calcurse
 super + F9
@@ -74,7 +74,7 @@ alt + n
          exec  pkill picom
 alt + comma
          exec ~/.dmenu/suresh.sh
-alt + period  
+alt + period
          exec xkill
 
 # # super + control + key

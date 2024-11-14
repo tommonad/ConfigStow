@@ -13,3 +13,4 @@ bash/.bash_history
 ranger/.config/ranger/plugins/
 ranger/.config/ranger/__pycache__/
 task/.config/task/taskchampion.sqlite3
+zsh/.config/zsh/.zcompdump
