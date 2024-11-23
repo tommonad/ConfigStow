@@ -14,3 +14,4 @@ ranger/.config/ranger/plugins/
 ranger/.config/ranger/__pycache__/
 task/.config/task/taskchampion.sqlite3
 zsh/.config/zsh/.zcompdump
+mpv/.config/mpv/scripts/total_playtime.list

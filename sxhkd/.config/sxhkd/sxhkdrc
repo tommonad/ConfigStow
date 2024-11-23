@@ -38,6 +38,8 @@ super + F3
         st -e nvim $HOME/vimwiki/vimwiki_work_md/index.md
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
+super + F6
+        /usr/bin/inkscape
 super + F7
         $HOME/.scripts/FreeCAD-0.21.2-Linux-x86_64.AppImage
 super + F8
