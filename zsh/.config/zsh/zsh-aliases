@@ -12,7 +12,6 @@ alias pu="sudo pacman -Syu --noconfirm"
 alias ppa="pacman -Qqen > ~/Work/arch_packages.txt"
 alias paur="pacman -Qqem > ~/Work/My_Install_scripts/aur_packages.txt"
 alias ka="killall"
-alias kb="xset r rate "
 alias refm="sudo reflector -c Belgium,Germany -a 12 --sort rate --save /etc/pacman.d/mirrorlist"
 alias ssn="sudo shutdown now"
 alias srb="sudo reboot"
@@ -100,7 +99,7 @@ alias wet="curl https://www.wttr.in/Eynatten"
 alias cal="cal -3"
 
 # Keyboard
-alias xmod="xmodmap ~/.config/X11/xmodmap"
+alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 180 40"
 
 # Update{{{
 alias au="yay -Syu --noconfirm"
@@ -194,7 +193,8 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias vimrc='vim ~/.config/vim/'
 
 # get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+
+alias mirror="sudo reflector --country Belgium,Germany --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"

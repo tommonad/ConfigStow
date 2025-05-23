@@ -41,11 +41,11 @@ super + F4
 super + F6
         /usr/bin/inkscape
 super + F7
-        $HOME/.scripts/FreeCAD-0.21.2-Linux-x86_64.AppImage
+        /usr/bin/freecad
 super + F8
         st -e calcurse
 super + F9
-        libreoffice24.8
+        libreoffice25.2
 super + F10
         tixati
 # Luke smith's bookmarks for internet surfing or adding file paths

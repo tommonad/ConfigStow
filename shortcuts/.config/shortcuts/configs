@@ -6,10 +6,11 @@ Vbm   ~/.config/surfraw/bookmarks
 Vco   ~/.config/shortcuts/configs
 Vdu   ~/.config/dunst/dunstrc
 Vfo   ~/.config/shortcuts/folders
-Vnr   ~/.config/nvim/lua/tom/remap.lua
+Vnr   ~/.config/nvim/lua/config/keymaps.lua
 Vnb   ~/.config/newsboat/config
-Vnp   ~/.config/nvim/lua/tom/packer.lua
-Vns   ~/.config/nvim/lua/tom/set.lua
+Vla   ~/.config/nvim/lua/config/lazy.lua
+Vlo   ~/.config/nvim/lua/config/options.lua
+Vwi   ~/.config/nvim/lua/plugins/vimwiki.lua
 Vri   ~/.config/ranger/rifle.conf
 Vrr   ~/.config/ranger/rc.conf
 Vrs   ~/.config/ranger/plugins/scope.sh
@@ -23,6 +24,7 @@ Vsw   ~/.config/suckless/dwm/config.h
 Vnu   ~/.config/newsboat/urls
 Vsx   ~/.config/sxhkd/sxhkdrc
 Vpc   ~/.config/picom/picom.conf
+Vxi   ~/.xinitrc
 Vzt   ~/.config/zathura/zathurarc
 Vza   ~/.config/zsh/zsh-aliases
 Vze   ~/.config/zsh/zsh-exports

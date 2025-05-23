@@ -30,8 +30,8 @@
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     # geometry = width=100 height=50 offset=0
-   height = 350
-   width  = 370
+   height = 150
+   width  = 270
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 

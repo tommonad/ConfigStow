@@ -29,7 +29,6 @@ source /usr/bin/virtualenvwrapper.sh
 # export GTK_MODULES=canberra-gtk-module
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk/"
 # export SAL_USE_VCLPLUGIN=gtk4
-export LD_LIBRARY_PATH="/usr/lib/jvm/java-17-openjdk/lib:$LD_LIBRARY_PATH"
 
 # Cleaned home dir with these
 
@@ -67,3 +66,4 @@ unset __conda_setup
 # Reverse layout of fuzzy finder and limit to 40%
 export FZF_DEFAULT_OPTS="--layout=reverse --height 50%"
 
+export LD_LIBRARY_PATH=/usr/lib:/usr/lib/jvm/java-17-openjdk/lib:$LD_LIBRARY_PATH
