@@ -95,4 +95,4 @@ XF86Calculator
 
 # Restart dwm
 ctrl + shift + q
-         pkill -RTMIN+8 dwm
+         pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
