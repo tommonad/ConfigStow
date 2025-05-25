@@ -12,3 +12,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "*sxhkdrc",
   command = "!pkill -USR1 sxhkd; setsid sxhkd -m1 &",
 })
+
+-- Save and load folds automatically
+vim.api.nvim_create_autocmd("BufWinLeave", {
+  pattern = "*",
+  command = "mkview",
+})
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*",
+  command = "silent! loadview",
+})

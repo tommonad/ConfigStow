@@ -22,7 +22,8 @@ alias wget="wget2 -c"
 alias kdwm="pkill -RTMIN+8 dwm"
 alias Gc="xprop | grep "CLASS""
 alias mkinit="sudo mkinitcpio -P"
-
+# Wifi password
+alias wfpass="nmcli device wifi show-password"
 
 # Boot into the bios without having to smash the buttons
 alias sleu="systemctl reboot --firmware-setup"
@@ -30,17 +31,14 @@ alias sleu="systemctl reboot --firmware-setup"
 # Mail
 alias rise="/usr/bin/offlineimap -o"
 
-# List files
+# List files with eza
 alias ll="eza --color=always --icons=always -lah"
 alias l.="eza -AdG --color=always --icons=always .* "
 alias ls="eza --long --git --no-time --no-user --no-permissions --no-filesize --colour=always --icons=always"
-
 # Fzf
 alias inv='nvim $(fzf --preview="bat --color=always {} ")'
 alias arch-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias psfzf="ps axc | fzf"
-
-
 # systemd
 alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
@@ -51,11 +49,7 @@ alias tli="trash-list"
 alias tem="trash-empty"
 alias tre="trash-restore"
 
-alias ZQ="exit"
 alias cl="clear"
-
-# Touch typing for the cli
-alias tpo="typon"
 
 # Mount user harddrive
 alias mm="mount /mnt/media"
@@ -63,15 +57,16 @@ alias um="umount /mnt/media"
 alias mu="mount /mnt/usb"
 alias uu="umount /mnt/usb"
 alias sm="sudo mount -o uid=1000,gid=1000"
-alias du="du -h"
-
 # Sansa clip
 alias msa="simple-mtpfs --device 1 -o uid=1000 /home/tom/tolino"
 alias usa="fusermount -u /home/tom/tolino"
-
+alias du="du -h"
 # Python environment
 alias pipinstall="$HOME/myvenv/bin/pip3.11 install"
 alias cht="curl cheat.sh/ "
+# Python activate to install packages pip install package after activate
+alias pa="source ~/myvenv/bin/activate"
+alias pd="deactivate"
 
 # Lf file manager
 alias lf="lfub" 
@@ -84,20 +79,12 @@ alias Tc="task calendar"
 alias Tl="task list"
 # alias Td="task rm "$1"" # don't know what that mean (i forgot)
 alias Tr="task ready"
-
-# Python activate to install packages pip install package after activate
-alias pa="source ~/myvenv/bin/activate"
-alias pd="deactivate"
-
 # Radio stations
-
 alias r1="myvenv/bin/radio --play Q102"
 alias rse="myvenv/bin/radio --search"
-
 # Weather
 alias wet="curl https://www.wttr.in/Eynatten"
 alias cal="cal -3"
-
 # Keyboard
 alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 180 40"
 
@@ -172,7 +159,6 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
 # youtube-dl
 #alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-
 alias opus="yt-dlp -f bestaudio --extract-audio --audio-format opus --audio-quality 0"
 # alias yta-best="yt-dlp --extract-audio --audio-format best "
 #alias yta-opus="youtube-dl --extract-audio --audio-format opus "
@@ -180,10 +166,9 @@ alias opus="yt-dlp -f bestaudio --extract-audio --audio-format opus --audio-qual
 alias ytdlp="yt-dlp -viUf 'bv*[height=1080]+ba'"
 
 # merge new settings
-alias merge="xrdb -merge ~/.Xresources"
+alias merge="xrdb -merge ~/.config/X11/xresources"
 
-#!/bin/sh
-alias f='zi'
+# Git commands
 alias lg='lazygit'
 alias gad="git add -A"
 alias gst='git status'
@@ -193,7 +178,6 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias vimrc='vim ~/.config/vim/'
 
 # get fastest mirrors
-
 alias mirror="sudo reflector --country Belgium,Germany --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
@@ -249,3 +233,4 @@ alias gpl="/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 alias cd="z"
+alias f='zi'
