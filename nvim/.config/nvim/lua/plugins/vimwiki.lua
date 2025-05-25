@@ -32,8 +32,8 @@ return {
       vim.g.vimwiki_markdown_link_ext = 1
       vim.g.vimwiki_hl_headers = 1
       vim.g.vimwiki_hl_cb_checked = 1
-      vim.g.vimwiki_folding = "custom"
-      vim.g.vimwiki_use_tab = false
+      vim.g.vimwiki_folding = "syntax"
+      vim.g.vimwiki_foldcolumn = 1
     end,
 
     config = function()
@@ -62,6 +62,25 @@ return {
         pattern = "markdown",
         callback = function()
           vim.opt_local.textwidth = 80
+        end,
+      })
+
+      -- Save & restore folds (view) for Vimwiki files
+      vim.api.nvim_create_autocmd("BufWinLeave", {
+        pattern = "*.md",
+        callback = function()
+          if vim.bo.filetype == "vimwiki" then
+            vim.cmd("mkview")
+          end
+        end,
+      })
+
+      vim.api.nvim_create_autocmd("BufWinEnter", {
+        pattern = "*.md",
+        callback = function()
+          if vim.bo.filetype == "vimwiki" then
+            vim.cmd("silent! loadview")
+          end
         end,
       })
     end,

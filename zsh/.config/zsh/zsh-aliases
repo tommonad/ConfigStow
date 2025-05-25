@@ -19,9 +19,11 @@ alias prob="journalctl -p 3 -xb"
 alias hist="history 1"
 alias cat="bat"
 alias wget="wget2 -c"
-alias kdwm="pkill -RTMIN+8 dwm"
+alias kdwm="pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &"
 alias Gc="xprop | grep "CLASS""
 alias mkinit="sudo mkinitcpio -P"
+# For when keys break
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 # Wifi password
 alias wfpass="nmcli device wifi show-password"
 
@@ -49,7 +51,6 @@ alias tli="trash-list"
 alias tem="trash-empty"
 alias tre="trash-restore"
 
-alias cl="clear"
 
 # Mount user harddrive
 alias mm="mount /mnt/media"
@@ -60,17 +61,12 @@ alias sm="sudo mount -o uid=1000,gid=1000"
 # Sansa clip
 alias msa="simple-mtpfs --device 1 -o uid=1000 /home/tom/tolino"
 alias usa="fusermount -u /home/tom/tolino"
-alias du="du -h"
 # Python environment
 alias pipinstall="$HOME/myvenv/bin/pip3.11 install"
 alias cht="curl cheat.sh/ "
 # Python activate to install packages pip install package after activate
 alias pa="source ~/myvenv/bin/activate"
 alias pd="deactivate"
-
-# Lf file manager
-alias lf="lfub" 
-
 # Tasks apps
 alias  T="task"
 alias Tw="task waiting"
@@ -87,7 +83,6 @@ alias wet="curl https://www.wttr.in/Eynatten"
 alias cal="cal -3"
 # Keyboard
 alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 180 40"
-
 # Update{{{
 alias au="yay -Syu --noconfirm"
 alias upgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -121,8 +116,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-
 # Config aliases
 alias v="nvim"
 alias vdm="nvim  ~/.config/dmenu/config.h"
@@ -165,7 +158,7 @@ alias opus="yt-dlp -f bestaudio --extract-audio --audio-format opus --audio-qual
 #alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias ytdlp="yt-dlp -viUf 'bv*[height=1080]+ba'"
 
-# merge new settings
+# Xresources merge new settings
 alias merge="xrdb -merge ~/.config/X11/xresources"
 
 # Git commands
@@ -174,8 +167,6 @@ alias gad="git add -A"
 alias gst='git status'
 alias gcm="git commit -m"
 alias gpu="git push"
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-alias vimrc='vim ~/.config/vim/'
 
 # get fastest mirrors
 alias mirror="sudo reflector --country Belgium,Germany --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist"
@@ -193,9 +184,10 @@ alias cp="cp -iv"
 alias mv='mv -i'
 alias rm='rm -Iv'
 
-# easier to read disk
+# File space usage
 alias df='pydf -h'     # human-readable sizes
 alias free='free -h' # show sizes in MB
+alias du="du -h"
 
 # Maintenance
 alias cj="sudo journalctl --vacuum-time=2weeks"
@@ -205,9 +197,6 @@ alias cj="sudo journalctl --vacuum-time=2weeks"
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-
-# For when keys break
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
 # Surfraw
 alias sraw="surfraw archwiki $arg"
@@ -234,3 +223,6 @@ alias gpl="/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias f='zi'
+# Zsh
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias cl="clear"

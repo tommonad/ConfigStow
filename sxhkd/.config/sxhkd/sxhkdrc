@@ -14,7 +14,7 @@ super + r
 super + w ; {f,t,b}
          {~/.dmenu/watchfilm.sh, \
          ~/.dmenu/watchtuts.sh, \
-        xdg-open https://www.youtube.com}
+         xdg-open https://www.youtube.com}
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
