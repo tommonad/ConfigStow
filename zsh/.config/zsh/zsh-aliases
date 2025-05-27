@@ -85,7 +85,7 @@ alias wet="curl https://www.wttr.in/Eynatten"
 alias cal="cal -3"
 # Keyboard
 alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 180 40"
-# Update{{{
+# Update
 alias au="yay -Syu --noconfirm"
 alias upgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias suin="sudo make clean install"
@@ -199,6 +199,9 @@ alias cj="sudo journalctl --vacuum-time=2weeks"
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+# Task manager
+alias bpy="bpytop"
 
 # Surfraw
 alias sraw="surfraw archwiki $arg"

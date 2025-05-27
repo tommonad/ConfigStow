@@ -13,13 +13,27 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "!pkill -USR1 sxhkd; setsid sxhkd -m1 &",
 })
 
--- Save and load folds automatically
+-- Define a function to check if a buffer should save/load views
+local function should_save_view()
+  local ft = vim.bo.filetype
+  local bt = vim.bo.buftype
+  return not (bt == "nofile" or bt == "help" or bt == "quickfix" or ft == "lazy" or ft == "TelescopePrompt")
+end
+
+-- Save view when leaving a window
 vim.api.nvim_create_autocmd("BufWinLeave", {
-  pattern = "*",
-  command = "mkview",
+  callback = function()
+    if should_save_view() then
+      vim.cmd("mkview")
+    end
+  end,
 })
 
+-- Load view when entering a window
 vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = "*",
-  command = "silent! loadview",
+  callback = function()
+    if should_save_view() then
+      vim.cmd("silent! loadview")
+    end
+  end,
 })
