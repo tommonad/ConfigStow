@@ -5,6 +5,8 @@ news.version=3.4.1
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and update location config as follows:
 
+# Contexts
+# context.home=Home
 # data.location=~/.local/share/task
 #hooks.location=~/.config/task/hooks
 
@@ -13,14 +15,21 @@ news.version=3.4.1
 #include light-256.theme
 #include dark-16.theme
 include dark-256.theme
-#include dark-red-256.theme
-#include dark-green-256.theme
+# include dark-red-256.theme
+# include dark-green-256.theme
 #include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
-#include solarized-dark-256.theme
+# include solarized-dark-256.theme
 #include solarized-light-256.theme
-#include no-color.theme
-
+# include no-color.theme
+context.work.read=project:work
+context.work.write=project:work
+context.health.read=project:health
+context.health.write=project:health
+context.computer.read=project:computer
+context.computer.write=project:computer
+context.sport.read=project:sport
+context.sport.write=project:sport

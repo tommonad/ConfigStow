@@ -70,11 +70,13 @@ alias pd="deactivate"
 # Tasks apps
 alias  T="task"
 alias Tw="task waiting"
-alias Ta="task_add.sh"
+alias Ta="~/.scripts/Task_scripts/task_add.sh"
 alias Tc="task calendar"
 alias Tl="task list"
 # alias Td="task rm "$1"" # don't know what that mean (i forgot)
 alias Tr="task ready"
+alias TC="task context "
+alias TW="taskwarrior-tui"
 # Radio stations
 alias r1="myvenv/bin/radio --play Q102"
 alias rse="myvenv/bin/radio --search"

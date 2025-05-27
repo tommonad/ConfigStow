@@ -23,6 +23,7 @@ Vst   ~/.config/suckless/st/config.h
 Vsw   ~/.config/suckless/dwm/config.h
 Vnu   ~/.config/newsboat/urls
 Vsx   ~/.config/sxhkd/sxhkdrc
+Vta   ~/.config/task/taskrc
 Vpc   ~/.config/picom/picom.conf
 Vxi   ~/.xinitrc
 Vzt   ~/.config/zathura/zathurarc
