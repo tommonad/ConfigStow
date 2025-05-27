@@ -8,15 +8,9 @@ vi=nvim
 super + d ; {d,p,w,s}
          {dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
 
+# Mydmenus scripts
 alt + d
          exec $HOME/.dmenu/mydmenus.sh
-
-# Newsboat and Neomutt
-super + n ; {e,w}
-         st -e {neomutt,newsboat}
-# Ranger
-super + r
-         $TERMINAL -e ranger
 
 # Watch films and Tutorials
 super + w ; {f,t}
@@ -24,16 +18,29 @@ super + w ; {f,t}
          ~/.dmenu/watchtuts.sh, \
          }
 
+# Print with dmscrot script
+super + Print
+         ~/.dmenu/dmscrot
+
+# Shutdown,suspend,restart
+alt + comma
+         exec ~/.dmenu/suresh.sh
+
+# Applications
+# Newsboat and Neomutt
+super + n ; {e,w}
+         st -e {neomutt,newsboat}
+
+# Ranger
+super + r
+         $TERMINAL -e ranger
+
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
         {st -e cmus,st -e cmus-lyrics, \
         cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
         cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
         cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
-
-# Print with dmscrot script
-super + Print
-         ~/.dmenu/dmscrot
 
 # Super + Function keys
 super + F1
@@ -70,10 +77,6 @@ alt + i
          exec  picom
 alt + n
          exec  pkill picom
-
-# Shutdown,suspend,restart
-alt + comma
-         exec ~/.dmenu/suresh.sh
 
 # Kill Apps
 alt + period
