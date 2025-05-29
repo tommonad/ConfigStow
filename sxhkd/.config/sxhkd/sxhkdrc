@@ -1,6 +1,7 @@
 # -----------------------------------------------------------------------------
 # wm independent hotkeys
 # -----------------------------------------------------------------------------
+
 # make sxhkd reload its configuration files:
 vi=nvim
 
@@ -30,11 +31,9 @@ alt + comma
 # Newsboat and Neomutt
 super + n ; {e,w}
          st -e {neomutt,newsboat}
-
 # Ranger
 super + r
          $TERMINAL -e ranger
-
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
         {st -e cmus,st -e cmus-lyrics, \
