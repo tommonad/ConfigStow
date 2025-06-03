@@ -5,8 +5,8 @@
 vi=nvim
 
 # Dmenu
-super + d ; {d,p,w,s}
-         {dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
+super + d ; {c,d,p,w,s}
+         {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
 
 alt + d
          exec $HOME/.dmenu/mydmenus.sh
@@ -49,7 +49,7 @@ super + F6
 super + F7
         /usr/bin/freecad
 super + F8
-        st -e calcurse
+        st -e taskwarrior-tui
 super + F9
         libreoffice25.2
 super + F10

@@ -6,29 +6,23 @@ alias SS="sudo systemctl"
 alias src="source ~/.config/zsh/.zshrc"
 alias upg="update-system"
 alias updb="sudo updatedb"
+
 # Pacman
+# For when keys break
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+
+#Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+
 alias  p="sudo pacman"
 alias pu="sudo pacman -Syu --noconfirm"
 alias ppa="pacman -Qqen > ~/Work/arch_packages.txt"
 alias paur="pacman -Qqem > ~/Work/My_Install_scripts/aur_packages.txt"
 alias ka="killall"
 alias refm="sudo reflector -c Belgium,Germany -a 12 --sort rate --save /etc/pacman.d/mirrorlist"
-alias ssn="sudo shutdown now"
-alias srb="sudo reboot"
-alias prob="journalctl -p 3 -xb"
-alias hist="history 1"
-alias cat="bat"
 alias wget="wget2 -c"
 alias kdwm="pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &"
-alias Gc="xprop | grep "CLASS""
-alias mkinit="sudo mkinitcpio -P"
-# For when keys break
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
-# Wifi password
-alias wfpass="nmcli device wifi show-password"
 
-# Boot into the bios without having to smash the buttons
-alias sleu="systemctl reboot --firmware-setup"
 
 # Mail
 alias rise="/usr/bin/offlineimap -o"
@@ -37,14 +31,17 @@ alias rise="/usr/bin/offlineimap -o"
 alias ll="eza --color=always --icons=always -lah"
 alias l.="eza -AdG --color=always --icons=always .* "
 alias ls="eza --long --git --no-time --no-user --no-permissions --no-filesize --colour=always --icons=always"
+
 # Fzf
 alias inv='nvim $(fzf --preview="bat --color=always {} ")'
 alias arch-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias psfzf="ps axc | fzf"
+
 # systemd
 alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
 alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
+
 # Trash
 alias tpu="trash-put"
 alias tli="trash-list"
@@ -58,6 +55,7 @@ alias um="umount /mnt/media"
 alias mu="mount /mnt/usb"
 alias uu="umount /mnt/usb"
 alias sm="sudo mount -o uid=1000,gid=1000"
+
 # Sansa clip
 alias msa="simple-mtpfs --device 1 -o uid=1000 /home/tom/tolino"
 alias usa="fusermount -u /home/tom/tolino"
@@ -67,6 +65,7 @@ alias cht="curl cheat.sh/ "
 # Python activate to install packages pip install package after activate
 alias pa="source ~/myvenv/bin/activate"
 alias pd="deactivate"
+
 # Tasks apps
 alias  T="task"
 alias Tw="task waiting"
@@ -77,6 +76,7 @@ alias Tl="task list"
 alias Tr="task ready"
 alias TC="task context "
 alias TW="taskwarrior-tui"
+
 # Radio stations
 alias r1="myvenv/bin/radio --play Q102"
 alias rse="myvenv/bin/radio --search"
@@ -149,8 +149,6 @@ alias vzshp="nvim ~/.config/zsh/zsh-prompt"
 # regex reference
 alias regref="perldoc perlreref"
 
-#Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
 
 # youtube-dl
 #alias yta-aac="youtube-dl --extract-audio --audio-format aac "
@@ -176,7 +174,7 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Colorize grep output (good for log files)
+# Grep 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -192,9 +190,18 @@ alias free='free -h' # show sizes in MB
 alias du="du -h"
 
 # Maintenance
-alias cj="sudo journalctl --vacuum-time=2weeks"
 
-# gpg encryption
+# Boot into the bios without having to smash the buttons
+alias sleu="systemctl reboot --firmware-setup"
+
+alias cj="sudo journalctl --vacuum-time=2weeks"
+alias ssn="sudo shutdown now"
+alias srb="sudo reboot"
+alias prob="journalctl -p 3 -xb"
+alias Gc="xprop | grep "CLASS""
+alias mkinit="sudo mkinitcpio -P"
+
+# gpg 
 # verify signature for isos
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
@@ -207,8 +214,10 @@ alias srpb="surfraw piratebay $arg"
 # Printer
 alias lpst="lpstat -p"
 
-# Network address
+# Network 
 alias ip="ip -c a"
+# Wifi password
+alias wfpass="nmcli device wifi show-password"
 
 # Virsh command for virtual machines
 alias vli="sudo virsh list --all"
@@ -221,10 +230,13 @@ alias vrem="virsh undefine $1 --remove-all-storage"
 # gnome-polkit command
 alias gpl="/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
 
+# Zsh
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias cl="clear"
+alias hist="history 1"
+alias cat="bat"
+
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias f='zi'
-# Zsh
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-alias cl="clear"

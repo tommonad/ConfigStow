@@ -13,6 +13,24 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "!pkill -USR1 sxhkd; setsid sxhkd -m1 &",
 })
 
+-- Reload dwm when its config is saved
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*dwm/config.h",
+  command = "!cd ~/.config/suckless/dwm/ && sudo make clean install",
+})
+
+-- Reload st when its config is saved
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*st/config.h",
+  command = "!cd ~/.config/suckless/st/ && sudo make clean install",
+})
+
+-- Reload dmenu when its config is saved
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*dmenu/config.h",
+  command = "!cd ~/.config/suckless/dmenu/ && sudo make clean install",
+})
+
 -- Save and load folds automatically
 vim.api.nvim_create_autocmd("BufWinLeave", {
   pattern = "*",
