@@ -4,6 +4,7 @@
 # make sxhkd reload its configuration files:
 vi=nvim
 
+# Applications
 # Dmenu
 super + d ; {c,d,p,w,s}
          {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
@@ -18,11 +19,6 @@ super + n ; {e,w}
 super + r
          $TERMINAL -e ranger
 
-# Watch films and Tutorials
-super + w ; {f,t}
-         {~/.dmenu/watchfilm.sh, \
-         ~/.dmenu/watchtuts.sh, \
-         }
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
@@ -34,6 +30,7 @@ super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
 # Print with dmscrot script
 super + Print
          ~/.dmenu/dmscrot
+
 
 # Super + Function keys
 super + F1
@@ -75,9 +72,11 @@ alt + n
 alt + comma
          exec ~/.dmenu/suresh.sh
 
+
 # Kill Apps
 alt + period
          exec xkil
+
 
 # Volume control
 XF86AudioRaiseVolume
@@ -87,6 +86,13 @@ XF86AudioLowerVolume
 XF86AudioMute
          exec amixer set Master toggle
 
+
 # Restart dwm
 ctrl + shift + q
          pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
+
+# Watch films and Tutorials
+super + w ; {f,t}
+         {~/.dmenu/watchfilm.sh, \
+         ~/.dmenu/watchtuts.sh, \
+         }
