@@ -8,16 +8,20 @@ vi=nvim
 # Dmenu
 super + d ; {c,d,p,w,s}
          {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
-
+super + e 
+         $TERMINAL -e nvim $HOME/notes/index.norg
 alt + d
          exec $HOME/.dmenu/mydmenus.sh
+# Typing app
+alt + t
+         $TERMINAL -e typon
 
 # Newsboat and Neomutt
 super + n ; {e,w}
          st -e {neomutt,newsboat}
-# Ranger
+# yazi
 super + r
-         $TERMINAL -e ranger
+         $TERMINAL -e yazi
 
 
 # cmus volume control
@@ -38,7 +42,7 @@ super + F1
 super + F2
         st -e nvim  $HOME/vimwiki/vimwiki_personal_md/index.md
 super + F3
-        st -e nvim $HOME/vimwiki/vimwiki_work_md/index.md
+        st -e nvim $HOME/Documents/Important/notes/index.norg
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
 super + F6
