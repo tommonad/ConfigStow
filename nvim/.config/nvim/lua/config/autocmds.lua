@@ -31,13 +31,22 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "!cd ~/.config/suckless/dmenu/ && sudo make clean install",
 })
 
--- Save and load folds automatically
+-- Save folds automatically
 vim.api.nvim_create_autocmd("BufWinLeave", {
   pattern = "*",
-  command = "mkview",
+  callback = function()
+    if vim.fn.bufname("%") ~= "" and vim.bo.buftype == "" then
+      vim.cmd("mkview")
+    end
+  end,
 })
 
+-- Load folds automatically
 vim.api.nvim_create_autocmd("BufWinEnter", {
   pattern = "*",
-  command = "silent! loadview",
+  callback = function()
+    if vim.fn.bufname("%") ~= "" and vim.bo.buftype == "" then
+      vim.cmd("silent! loadview")
+    end
+  end,
 })
