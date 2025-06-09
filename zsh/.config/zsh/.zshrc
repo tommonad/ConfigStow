@@ -83,3 +83,5 @@ autoload edit-command-line; zle -N edit-command-line
 if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
  eval "$(zoxide init zsh)"
+
+source /home/tom/.config/broot/launcher/bash/br

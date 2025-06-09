@@ -3,7 +3,7 @@ alias fcc="sudo fc-cache -fv"
 alias ff="fastfetch"
 alias sle="systemctl suspend"
 alias SS="sudo systemctl"
-alias src="source ~/.config/zsh/.zshrc"
+alias src=". ~/.config/zsh/.zshrc"
 alias upg="update-system"
 alias updb="sudo updatedb"
 
