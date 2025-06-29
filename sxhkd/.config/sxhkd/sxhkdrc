@@ -42,9 +42,11 @@ super + F1
 super + F2
         st -e nvim  $HOME/vimwiki/vimwiki_personal_md/index.md
 super + F3
-        st -e nvim $HOME/Documents/Important/notes/index.norg
+        st -e nvim $HOME/notes/Computer/index.norg
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
+super + F5
+        ~/.local/bin/dmenuunicode
 super + F6
         /usr/bin/inkscape
 super + F7

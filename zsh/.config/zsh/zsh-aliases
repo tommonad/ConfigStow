@@ -84,11 +84,11 @@ alias rse="myvenv/bin/radio --search"
 alias wet="curl https://www.wttr.in/Eynatten"
 alias cal="cal -3"
 # Keyboard
-alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 180 40"
+alias xmod="xmodmap ~/.config/X11/xmodmap && xset r rate 200 50"
 # Update{{{
 alias au="yay -Syu --noconfirm"
 alias upgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias suin="sudo make clean install"
+alias suin="cd $XDG_CONFIG_HOME/suckless/dwm && sudo make clean install"
 
 #check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
@@ -214,8 +214,6 @@ alias srpb="surfraw piratebay $arg"
 # Printer
 alias lpst="lpstat -p"
 
-# Network 
-alias ip="ip -c a"
 # Wifi password
 alias wfpass="nmcli device wifi show-password"
 

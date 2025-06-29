@@ -31,12 +31,11 @@ crontab https://crontab.guru/
 archive https://archive.org/
 opendns https://login.opendns.com/?return_to=https%3A%2F%2Fdashboard.opendns.com%2F
 github https://github.com/login
-modem http://192.168.1.1/
 proximus https://www.proximus.be/login/en/
 ostbelgiendirekt https://ostbelgiendirekt.be/
 rmail https://mail.riseup.net/rc/
 gmail https://mail.google.com/mail/u/0/#inbox
-flightradar24 https://www.flightradar24.com/-19.59,136.28/16
+flightradar24 https://www.flightradar24.com/THY4XK/3af2b6e8
 cmustut https://linux.die.net/man/7/cmus-tutorial
 dropbox https://www.dropbox.com/login?src=logout
 kickstart https://github.com/nvim-lua/kickstart.nvim?tab=readme-ov-file
@@ -66,3 +65,5 @@ alj https://aljazeera.com
 neorg https://github.com/nvim-neorg/neorg/wiki
 euim https://euimmobilien.be/inserat.php?ref=250
 ehosp https://imaging.hospital-eupen.be/pacsportal/loginaccesscode.aspx
+yazi https://github.com/sxyazi/yazi
+trce https://typeracer.com
