@@ -15,6 +15,7 @@ ranger/.config/ranger/__pycache__/
 task/.config/task/taskchampion.sqlite3
 zsh/.config/zsh/.zcompdump
 mpv/.config/mpv/scripts/total_playtime.list
+mpv/.config/mpv/watch_later/
 nvim/.config/nvim/lazy-lock.json
 yazi/.config/yazi/flavors/ayu-dark.yazi
 yazi/.config/yazi/flavors/dracula.yazi/tmtheme.xml

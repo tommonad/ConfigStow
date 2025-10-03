@@ -23,6 +23,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export PATH="/usr/local/bin:$PATH"
 source /usr/bin/virtualenvwrapper.sh
+export PATH=$HOME/.local/share/npm/bin:$PATH
 # export GTK_PATH=/usr/lib/gtk-2.0:/usr/lib/gtk-3.0
 # export GTK_MODULES=canberra-gtk-module
 export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
@@ -30,7 +31,7 @@ export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 # export SAL_USE_VCLPLUGIN=gtk4
 
 # Cleaned home dir with these
-
+export GENIUS_API_TOKEN="l3jpyD3EqGiS6T-BPfS8GpCRODyb8xCRLqV-tGX73pQ1Zuzw00_-vl73UPvbbgQk"
 export TERMCMD="/usr/local/bin/st"
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/yarnrc"'
 eval "$(fnm env)"

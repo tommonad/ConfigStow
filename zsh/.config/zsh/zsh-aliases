@@ -1,3 +1,6 @@
+# Crontab
+alias crli="crontab -l"
+
 # Shutdown,reboot and sleep
 alias fcc="sudo fc-cache -fv"
 alias ff="fastfetch"
@@ -40,6 +43,12 @@ alias psfzf="ps axc | fzf"
 # systemd
 alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
+# Boot into the bios without having to smash the buttons
+alias sleu="systemctl reboot --firmware-setup"
+
+# Restart cups
+alias recups="sudo systemctl restart cups"
+
 alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
 
 # Trash
@@ -60,7 +69,7 @@ alias sm="sudo mount -o uid=1000,gid=1000"
 alias msa="simple-mtpfs --device 1 -o uid=1000 /home/tom/tolino"
 alias usa="fusermount -u /home/tom/tolino"
 # Python environment
-alias pipinstall="$HOME/myvenv/bin/pip3.11 install"
+alias pipinstall="$HOME/myvenv/bin/pip3 install"
 alias cht="curl cheat.sh/ "
 # Python activate to install packages pip install package after activate
 alias pa="source ~/myvenv/bin/activate"
@@ -191,8 +200,6 @@ alias du="du -h"
 
 # Maintenance
 
-# Boot into the bios without having to smash the buttons
-alias sleu="systemctl reboot --firmware-setup"
 
 alias cj="sudo journalctl --vacuum-time=2weeks"
 alias ssn="sudo shutdown now"

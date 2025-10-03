@@ -1,6 +1,9 @@
 !! Transparency (0-1):
 *.alpha: 0.9
 
+!! Xft.dpi: 120
+!! Xft.rgba: rgb
+Xft.hintstyle: hintslight
 !! Set a default font and font size as below:
 *.font: JetBrainsMono Nerd Font:size=14:antialias=true:autohint=true
 

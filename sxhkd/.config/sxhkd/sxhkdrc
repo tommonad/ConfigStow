@@ -1,14 +1,18 @@
-# -----------------------------------------------------------------------------
-# wm independent hotkeys
+# independent hotkeys
 # -----------------------------------------------------------------------------
 # make sxhkd reload its configuration files:
 vi=nvim
 
 # Applications
+
+# Toggles crontab on/off
+super + c
+          exec $HOME/.bin/crontog
+
 # Dmenu
 super + d ; {c,d,p,w,s}
          {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
-super + e 
+super + e
          $TERMINAL -e nvim $HOME/notes/index.norg
 alt + d
          exec $HOME/.dmenu/mydmenus.sh
@@ -18,7 +22,7 @@ alt + t
 
 # Newsboat and Neomutt
 super + n ; {e,w}
-         st -e {neomutt,newsboat}
+         $TERMINAL -e {neomutt,newsboat}
 # yazi
 super + r
          $TERMINAL -e yazi
@@ -26,7 +30,7 @@ super + r
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
-        {st -e cmus,st -e lyrics, \
+        {$TERMINAL -e cmus,$TERMINAL -e clyrics -c $1 , \
         cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
         cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
         cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
@@ -37,12 +41,10 @@ super + Print
 
 
 # Super + Function keys
-super + F1
-        st -e nvim  $HOME/vimwiki/journal_md/index.md
-super + F2
-        st -e nvim  $HOME/vimwiki/vimwiki_personal_md/index.md
+# super + F1
+# super + F2
 super + F3
-        st -e nvim $HOME/notes/Computer/index.norg
+        $TERMINAL -e nvim $HOME/notes/Computer/index.norg
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
 super + F5
@@ -52,7 +54,7 @@ super + F6
 super + F7
         /usr/bin/freecad
 super + F8
-        st -e taskwarrior-tui
+        $TERMINAL -e /bin/taskwarrior-tui
 super + F9
         libreoffice25.2
 super + F10
@@ -97,7 +99,7 @@ XF86AudioMute
 ctrl + shift + q
          pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
 
-# Watch films and Tutorials
+# films and Tutorials
 super + w ; {f,t}
          {~/.dmenu/watchfilm.sh, \
          ~/.dmenu/watchtuts.sh, \
