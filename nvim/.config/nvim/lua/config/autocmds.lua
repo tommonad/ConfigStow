@@ -10,12 +10,7 @@
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "sxhkdrc",
   callback = function()
-    -- Reload sxhkd config
-    vim.fn.system("pkill -USR1 sxhkd")
-    -- Optional: restart sxhkd instance if you want
-    -- vim.fn.system("setsid sxhkd -m1 &")
-
-    -- Notify user about successful reload
-    vim.notify("sxhkd config reloaded!", vim.log.levels.INFO)
+    vim.fn.system("pkill -USR1 -x sxhkd || (sxhkd &)")
+    vim.fn.system("notify-send 'sxhkd reloaded ✅'")
   end,
 })

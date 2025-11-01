@@ -1,7 +1,7 @@
 # independent hotkeys
 # -----------------------------------------------------------------------------
 # make sxhkd reload its configuration files:
-vi=nvim
+# vi=nvim
 
 # Applications
 
@@ -13,24 +13,24 @@ super + c
 super + d ; {c,d,p,w,s}
          {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
 super + e
-         $TERMINAL -e nvim $HOME/notes/index.norg
+         st -e nvim $HOME/notes/index.norg
 alt + d
          exec $HOME/.dmenu/mydmenus.sh
 # Typing app
 alt + t
-         $TERMINAL -e typon
+         st -e typon
 
 # Newsboat and Neomutt
-super + n ; {e,w}
-         $TERMINAL -e {neomutt,newsboat}
+super + n ; {m,b}
+         st -e {neomutt,newsboat}
 # yazi
 super + r
-         $TERMINAL -e yazi
+         st -e yazi
 
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
-        {$TERMINAL -e cmus,$TERMINAL -e clyrics -c $1 , \
+        {st -e cmus,st -e clyrics -c $1 , \
         cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
         cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
         cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
@@ -44,7 +44,7 @@ super + Print
 # super + F1
 # super + F2
 super + F3
-        $TERMINAL -e nvim $HOME/notes/Computer/index.norg
+        st -e nvim $HOME/notes/Computer/index.norg
 super + F4
         /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
 super + F5
@@ -54,7 +54,7 @@ super + F6
 super + F7
         /usr/bin/freecad
 super + F8
-        $TERMINAL -e /bin/taskwarrior-tui
+        st -e /bin/taskwarrior-tui
 super + F9
         libreoffice25.2
 super + F10
@@ -104,3 +104,8 @@ super + w ; {f,t}
          {~/.dmenu/watchfilm.sh, \
          ~/.dmenu/watchtuts.sh, \
          }
+
+# Nb Browse Note in the Browser
+alt + b
+      nb browse
+

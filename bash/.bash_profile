@@ -2,6 +2,4 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-source /home/tom/.config/broot/launcher/bash/br
+[[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"

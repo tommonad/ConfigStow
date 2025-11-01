@@ -10,6 +10,9 @@ alias src=". ~/.config/zsh/.zshrc"
 alias upg="update-system"
 alias updb="sudo updatedb"
 
+# List paths in a column
+alias listpath="echo $PATH | tr ':' '\n'"
+
 # Pacman
 # For when keys break
 alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
