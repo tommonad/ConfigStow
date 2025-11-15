@@ -248,3 +248,11 @@ alias cat="bat"
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias f='zi'
+
+# Dvd's
+alias pdvd="mpv dvd:// --dvd-device=/dev/sr0"
+alias edvd="eject /dev/sr0"
+alias idvd="eject -t /dev/sr0"
+
+# Sxhkd
+alias sxh="sxhkd -m 1 &"

@@ -12,7 +12,8 @@ unsetopt BEEP
 
 
 # completions
-autoload -Uz compinit
+autoload -Uz compinit && compinit -i
+
 zstyle ':completion:*' menu select
 # zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist

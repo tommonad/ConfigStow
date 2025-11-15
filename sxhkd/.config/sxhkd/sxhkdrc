@@ -1,7 +1,7 @@
 # independent hotkeys
 # -----------------------------------------------------------------------------
 # make sxhkd reload its configuration files:
-# vi=nvim
+vi=nvim
 
 # Applications
 
@@ -104,8 +104,3 @@ super + w ; {f,t}
          {~/.dmenu/watchfilm.sh, \
          ~/.dmenu/watchtuts.sh, \
          }
-
-# Nb Browse Note in the Browser
-alt + b
-      nb browse
-

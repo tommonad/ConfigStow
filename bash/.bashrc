@@ -131,6 +131,8 @@ ex() {
 }
 
 ### ALIASES ###
+# Grep
+alias grep="grep --color=auto"
 
 # root privileges
 alias doas="doas --"
@@ -141,7 +143,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # vim and emacs
-alias vim=vim
+alias v=nvim
 
 # devour windows
 alias mpv="devour mpv"
