@@ -18,7 +18,7 @@ export TERMINAL="st"
 export MANWIDTH=999
 export BROWSER=brave
 # Added by surfraw-update-path
-export PATH="$PATH:/usr/lib/surfraw"
+# export PATH="$PATH:/usr/lib/surfraw"
 export LANG=en_US.UTF-8
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
