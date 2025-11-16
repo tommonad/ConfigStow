@@ -80,7 +80,7 @@ autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
 # Show indicator that the shell was spawned from ranger
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+if [ -n "$YAZI_LEVEL" ]; then export PS1="[yazi]$PS1"; fi
 
  eval "$(zoxide init zsh)"
 

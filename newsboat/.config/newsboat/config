@@ -45,7 +45,7 @@ color article white default bold
 ## recently added -vU when problems arise delete
 macro v set browser "mpv %u" ; open-in-browser ; set browser "w3m %u"
 macro z set browser "yt-dlp -vUF 'bv*[height=1080]+ba'" ; open-in-browser ; set browser "w3m %u"
-macro t set browser "qutebrowser" ; open-in-browser ; set browser "qutebrowser %u"
+macro t set browser "brave" ; open-in-browser ; set browser "brave %u"
 
 
 
