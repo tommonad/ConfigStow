@@ -7,100 +7,97 @@ vi=nvim
 
 # Toggles crontab on/off
 super + c
-          exec $HOME/.bin/crontog
+  exec $HOME/.bin/crontog
 
 # Dmenu
 super + d ; {c,d,p,w,s}
-         {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
-super + e
-         st -e nvim $HOME/notes/index.norg
+  {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
+
 alt + d
-         exec $HOME/.dmenu/mydmenus.sh
+  exec $HOME/.dmenu/mydmenus.sh
+
+alt + period 
+  exec  /usr/bin/xkill
+
 # Typing app
+
 alt + t
-         st -e typon
+  st -e typon
 
 # Newsboat and Neomutt
 super + n ; {m,b}
-         st -e {neomutt,newsboat}
+  st -e {neomutt,newsboat}
 # yazi
 super + r
-         st -e yazi
+  st -e yazi
 
 
 # cmus volume control
 super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
-        {st -e cmus,st -e clyrics -c $1 , \
-        cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
-        cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
-        cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
+  {st -e cmus,st -e clyrics -c $1 , \
+  cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
+  cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
+  cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
 
 # Print with dmscrot script
 super + Print
-         ~/.dmenu/dmscrot
+  ~/.dmenu/dmscrot
 
 
 # Super + Function keys
 # super + F1
 # super + F2
 super + F3
-        st -e nvim $HOME/notes/Computer/index.norg
-super + F4
-        /usr/bin/vym /home/tom/Documents/Important/VYM/MyTools.vym
+  st -e nvim $HOME/notes/Computer/index.norg
 super + F5
-        ~/.local/bin/dmenuunicode
+  ~/.local/bin/dmenuunicode
 super + F6
-        /usr/bin/inkscape
+  /usr/bin/inkscape
 super + F7
-        /usr/bin/freecad
+  /usr/bin/freecad
 super + F8
-        st -e /bin/taskwarrior-tui
+  st -e /bin/taskwarrior-tui
 super + F9
-        libreoffice25.2
+  libreoffice25.2
 super + F10
-        tixati
+  tixati
 
 # Libreofffice files
 alt + e ; {b,e,t,s,o,g}
-         {xdg-open ~/Documents/Libreoffice/Berlingo/BerlingoReparatur.ods, \
-         xdg-open ~/Documents/Libreoffice/Electricity/Electricity.ods, \
-         xdg-open ~/Documents/Libreoffice/My_Stuff/MyTools.odb, \
-         xdg-open ~/Documents/Libreoffice/My_Stuff/Tools.ods, \
-         xdg-open ~/Documents/Libreoffice/My_Stuff/MyOffice.odb, \
-         xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods \
-         }
+  {xdg-open ~/Documents/Libreoffice/Berlingo/BerlingoReparatur.ods, \
+  xdg-open ~/Documents/Libreoffice/Electricity/Electricity.ods, \
+  xdg-open ~/Documents/Libreoffice/My_Stuff/MyTools.odb, \
+  xdg-open ~/Documents/Libreoffice/My_Stuff/Tools.ods, \
+  xdg-open ~/Documents/Libreoffice/My_Stuff/MyOffice.odb, \
+  xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods \
+  }
 
 # Picom on and off
 alt + i
-         exec  picom
+  exec  picom
 alt + n
-         exec  pkill picom
+  exec  pkill picom
 
 # Shutdown,suspend,restart
 alt + comma
-         exec ~/.dmenu/suresh.sh
-
-
-# Kill Apps
-alt + period
-         exec xkil
+  exec ~/.dmenu/suresh.sh
 
 
 # Volume control
 XF86AudioRaiseVolume
-         exec amixer set Master 5%+
+  exec amixer set Master 5%+
 XF86AudioLowerVolume
-         exec amixer set Master 5%-
+  exec amixer set Master 5%-
 XF86AudioMute
-         exec amixer set Master toggle
+  exec amixer set Master toggle
 
 
 # Restart dwm
 ctrl + shift + q
-         pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
+  pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
 
 # films and Tutorials
 super + w ; {f,t}
-         {~/.dmenu/watchfilm.sh, \
-         ~/.dmenu/watchtuts.sh, \
-         }
+  {~/.dmenu/watchfilm.sh, \
+  ~/.dmenu/watchtuts.sh, \
+  }

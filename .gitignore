@@ -26,5 +26,5 @@ yazi/.config/yazi/keymap.toml
 yazi/.config/yazi/package.toml
 yazi/.config/yazi/theme.toml
 yazi/.config/yazi/yazi.toml
-zsh/.config/zsh/off.zshrc
+zsh/
 yazi/.config/yazi/flavors/dracula.yazi
