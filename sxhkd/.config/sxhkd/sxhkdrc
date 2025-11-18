@@ -1,23 +1,21 @@
 # independent hotkeys
 # -----------------------------------------------------------------------------
-# make sxhkd reload its configuration files:
-vi=nvim
 
 # Applications
 
 # Toggles crontab on/off
 super + c
-  exec $HOME/.bin/crontog
+   $HOME/.bin/crontog
 
 # Dmenu
 super + d ; {c,d,p,w,s}
   {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
 
 alt + d
-  exec $HOME/.dmenu/mydmenus.sh
+   $HOME/.dmenu/mydmenus.sh
 
-alt + period 
-  exec  /usr/bin/xkill
+alt + period
+    /usr/bin/xkill
 
 # Typing app
 
@@ -69,27 +67,26 @@ alt + e ; {b,e,t,s,o,g}
   xdg-open ~/Documents/Libreoffice/My_Stuff/MyTools.odb, \
   xdg-open ~/Documents/Libreoffice/My_Stuff/Tools.ods, \
   xdg-open ~/Documents/Libreoffice/My_Stuff/MyOffice.odb, \
-  xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods \
-  }
+  xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods}
 
 # Picom on and off
 alt + i
-  exec  picom
+    picom
 alt + n
-  exec  pkill picom
+    pkill picom
 
 # Shutdown,suspend,restart
 alt + comma
-  exec ~/.dmenu/suresh.sh
+   ~/.dmenu/suresh.sh
 
 
 # Volume control
 XF86AudioRaiseVolume
-  exec amixer set Master 5%+
+   amixer set Master 5%+
 XF86AudioLowerVolume
-  exec amixer set Master 5%-
+   amixer set Master 5%-
 XF86AudioMute
-  exec amixer set Master toggle
+   amixer set Master toggle
 
 
 # Restart dwm
@@ -99,5 +96,6 @@ ctrl + shift + q
 # films and Tutorials
 super + w ; {f,t}
   {~/.dmenu/watchfilm.sh, \
-  ~/.dmenu/watchtuts.sh, \
+  ~/.dmenu/watchtuts.sh \
   }
+
