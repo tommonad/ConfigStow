@@ -4,63 +4,73 @@
 # Applications
 
 # Toggles crontab on/off
-super + c
+alt + g
    $HOME/.bin/crontog
 
-# Dmenu
-super + d ; {c,d,p,w,s}
-  {~/.dmenu/dmconf,dmenu_run,passmenu,~/.dmenu/webbm.sh,~/.dmenu/search.sh}
-
+# # Dmenu
+alt + F1 ; {c,d,p}
+  {~/.dmenu/dmconf,dmenu_run,passmenu}
+#
 alt + d
    $HOME/.dmenu/mydmenus.sh
-
-alt + period
-    /usr/bin/xkill
-
-# Typing app
-
-alt + t
-  st -e typon
-
-# Newsboat and Neomutt
-super + n ; {m,b}
-  st -e {neomutt,newsboat}
-# yazi
-super + r
-  st -e yazi
+#
+# alt + period
+#     /usr/bin/xkill
+#
+# # Typing app
+#
+# alt + t
+#   st -e typon
+#
+# # Newsboat and Neomutt
+# alt + n ; {m,b}
+#   st -e {neomutt,newsboat}
 
 
-# cmus volume control
-super + m ; {m,l,a,p,u,s,t,n,r,comma,period}
+#
+# # cmus volume control
+alt + m ; {m,l,a,p,u,s,t,n,r,comma,period}
   {st -e cmus,st -e clyrics -c $1 , \
   cmus-remote -C "toggle aaa_mode",cmus-remote -p,cmus-remote -u,\
   cmus-remote -s,cmus-remote -C "view tree",cmus-remote -n,\
   cmus-remote -r,cmus-remote -v -10%,cmus-remote -v +10%}
 
-# Print with dmscrot script
-super + Print
+#----------------------------------------------------------------------
+# Web search
+#----------------------------------------------------------------------
+alt + s
+  ~/.dmenu/search.sh
+
+#----------------------------------------------------------------------
+# Web bookmarks
+#----------------------------------------------------------------------
+shift + w
+    ~/.dmenu/webbm.sh
+
+# # Print with dmscrot script
+alt + Print
   ~/.dmenu/dmscrot
-
-
-# Super + Function keys
-# super + F1
-# super + F2
-super + F3
-  st -e nvim $HOME/notes/Computer/index.norg
-super + F5
+#
+#
+# # alt + Function keys
+# # alt + F1
+# # alt + F2
+# alt + F3
+#   st -e nvim $HOME/notes/Computer/index.norg
+alt + F5
   ~/.local/bin/dmenuunicode
-super + F6
-  /usr/bin/inkscape
-super + F7
-  /usr/bin/freecad
-super + F8
+# alt + F6
+#   /usr/bin/inkscape
+# alt + F7
+#   /usr/bin/freecad
+alt + F8
   st -e /bin/taskwarrior-tui
-super + F9
-  libreoffice25.2
-super + F10
+# alt + F9
+#   libreoffice25.2
+alt + F10
   tixati
-
-# Libreofffice files
+#
+# # Libreofffice files
 alt + e ; {b,e,t,s,o,g}
   {xdg-open ~/Documents/Libreoffice/Berlingo/BerlingoReparatur.ods, \
   xdg-open ~/Documents/Libreoffice/Electricity/Electricity.ods, \
@@ -68,34 +78,34 @@ alt + e ; {b,e,t,s,o,g}
   xdg-open ~/Documents/Libreoffice/My_Stuff/Tools.ods, \
   xdg-open ~/Documents/Libreoffice/My_Stuff/MyOffice.odb, \
   xdg-open ~/Documents/Libreoffice/My_Stuff/Box_contents.ods}
-
-# Picom on and off
+#
+# # Picom on and off
 alt + i
     picom
 alt + n
     pkill picom
-
-# Shutdown,suspend,restart
+#
+# # Shutdown,suspend,restart
 alt + comma
    ~/.dmenu/suresh.sh
-
-
-# Volume control
+#
+#
+# # Volume control
 XF86AudioRaiseVolume
    amixer set Master 5%+
 XF86AudioLowerVolume
    amixer set Master 5%-
 XF86AudioMute
    amixer set Master toggle
-
-
-# Restart dwm
+#
+#
+# # Restart dwm
 ctrl + shift + q
-  pkill -RTMIN+8 dwm && ~/.config/suckless/dwm-bar/dwm_bar.sh &
-
-# films and Tutorials
-super + w ; {f,t}
+  pkill -RTMIN+8 dwm
+#
+# # films and Tutorials
+alt + w ; {f,t}
   {~/.dmenu/watchfilm.sh, \
   ~/.dmenu/watchtuts.sh \
   }
-
+#
