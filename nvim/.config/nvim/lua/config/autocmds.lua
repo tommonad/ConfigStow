@@ -8,9 +8,21 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "sxhkdrc",
+  pattern = "dxhd.sh",
   callback = function()
-    vim.fn.system("pkill -USR1 -x sxhkd || (sxhkd &)")
-    vim.fn.system("notify-send 'sxhkd reloaded ✅'")
+    vim.fn.system("dxhd -r")
+    vim.fn.system("notify-send 'dxhd reloaded ✅'")
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  pattern = "*.sh",
+  callback = function()
+    -- Insert template
+    vim.cmd("0r ~/.config/nvim/templates/skeleton.sh")
+
+    -- Replace {{DATE}} with today's date
+    local date = os.date("%Y-%m-%d")
+    vim.cmd("silent! %s/{{DATE}}/" .. date .. "/g")
   end,
 })
