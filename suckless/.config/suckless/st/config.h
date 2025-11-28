@@ -5,11 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+// static char *font = "JetBrainsMono Nerd
+// Font:pixelsize=16:antialias=true:autohint=true";
 static char *font =
     "JetBrainsMono Nerd Font:pixelsize=18:antialias=true:autohint=true";
 static char *font2[] = {
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"};
-static int borderpx = 2;
+static int borderpx = 3;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -109,7 +111,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.8;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -168,7 +170,8 @@ static unsigned int rows = 24;
 /*
  * Default colour and shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
+// static unsigned int mouseshape = XC_xterm;
+static unsigned int mouseshape = XC_left_ptr;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
@@ -274,12 +277,12 @@ static Shortcut shortcuts[] = {
     {MODKEY, XK_j, kscrolldown, {.i = 1}},
     {MODKEY, XK_Up, kscrollup, {.i = 1}},
     {MODKEY, XK_Down, kscrolldown, {.i = 1}},
-    {MODKEY, XK_u, kscrollup, {.i = -1}},
-    {MODKEY, XK_d, kscrolldown, {.i = -1}},
-    {MODKEY, XK_s, changealpha, {.f = -0.05}},
-    {MODKEY, XK_a, changealpha, {.f = +0.05}},
+    // {MODKEY, XK_u, kscrollup, {.i = -1}},
+    // {MODKEY, XK_d, kscrolldown, {.i = -1}},
+    // {MODKEY, XK_s, changealpha, {.f = -0.05}},
+    // {MODKEY, XK_a, changealpha, {.f = +0.05}},
     {TERMMOD, XK_Up, zoom, {.f = +1}},
-    {TERMMOD, u XK_Down, zoom, {.f = -1}},
+    {TERMMOD, XK_Down, zoom, {.f = -1}},
     {TERMMOD, XK_K, zoom, {.f = +1}},
     {TERMMOD, XK_J, zoom, {.f = -1}},
     {TERMMOD, XK_U, zoom, {.f = +2}},
