@@ -1,9 +1,9 @@
 nvim/.config/nvim/undodir
+nvim/.config/nvim/plugin
 cmus/.config/cmus/cache
 cmus/.config/cmus/lib.pl
 cmus/.config/cmus/search-history
 cmus/.config/cmus/command-history
-nvim/.config/nvim/plugin
 neomutt/.config/neomutt/net.riseup.linux54/cache/
 neomutt/.config/neomutt/Mail
 neomutt/.config/neomutt/safe
@@ -13,7 +13,8 @@ ranger/.config/ranger/plugins/
 ranger/.config/ranger/__pycache__/
 task/.config/task/taskchampion.sqlite3
 zsh/.config/zsh/.zcompdump
+zsh/.config/zsh/plugins
+zsh/.config/zsh/.zsh_history
 mpv/.config/mpv/scripts/total_playtime.list
 mpv/.config/mpv/watch_later/
 nvim/.config/nvim/lazy-lock.json
-zsh/.config/zsh/plugins
