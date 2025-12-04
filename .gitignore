@@ -17,14 +17,4 @@ zsh/.config/zsh/.zcompdump
 mpv/.config/mpv/scripts/total_playtime.list
 mpv/.config/mpv/watch_later/
 nvim/.config/nvim/lazy-lock.json
-yazi/.config/yazi/flavors/ayu-dark.yazi
-yazi/.config/yazi/flavors/dracula.yazi/tmtheme.xml
-yazi/.config/yazi/flavors/sunset.yazi
-yazi/.config/yazi/plugins
-yazi/.config/yazi/init.lua
-yazi/.config/yazi/keymap.toml
-yazi/.config/yazi/package.toml
-yazi/.config/yazi/theme.toml
-yazi/.config/yazi/yazi.toml
-zsh/
-yazi/.config/yazi/flavors/dracula.yazi
+zsh/.config/zsh/plugins

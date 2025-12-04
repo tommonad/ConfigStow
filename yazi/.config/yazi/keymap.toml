@@ -1,0 +1,36 @@
+[[manager.keymap]]
+on = ["A-p"]  # Alt + p
+run = "shell for f in {clipboard_files}; do ln -s \"$f\" .; done"
+desc = "Paste clipboard files as symbolic links"
+
+[mgr]
+prepend_keymap = [
+    {on   = "l", run  = "plugin smart-enter", desc = "Enter the child directory, or open the file"},
+    {on   = "t", run  = "plugin smart-tab", desc = "Create a tab and enter the hovered directory"},
+    # {on  = "y", run = [ 'shell -- echo "$@" | xclip -i -selection clipboard -t text/uri-list', "yank" ], desc = "Yank into the clipboard"}
+    {on = "M", run = "plugin mount", desc = "Manage mount points"},
+    {on = [ "c", "m"], run = "plugin chmod", desc = "Chmod on selected files"},
+    {on = "!", run = 'shell "$SHELL" --block', desc = "Open $SHELL here"},
+# Goto
+	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
+	{ on = [ "g", "D" ],       run = "cd ~/Documents",   desc = "Go ~/Documents" },
+	{ on = [ "g", "i" ],       run = "cd ~/Documents/Important",   desc = "Go ~/Documents/Important" },
+	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
+	{ on = [ "g", "t" ],       run = "cd ~/Torrents",   desc = "Go ~/Torrents" },
+	{ on = [ "g", "T" ],       run = "cd ~/Tutorials",   desc = "Go ~/Tutorials" },
+	{ on = [ "g", "p" ],       run = "cd ~/Pictures",   desc = "Go ~/Pictures" },
+	{ on = [ "g", "M" ],       run = "cd /mnt/media/MyMovies/Films",   desc = "Go MyMovies" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
+# Sessions
+    { on = [ "P", "s" ], run = "plugin projects save", desc = "Save current project" },
+    { on = [ "P", "l" ], run = "plugin projects load", desc = "Load project" },
+    { on = [ "P", "d" ], run = "plugin projects delete", desc = "Delete project" },
+    { on = [ "P", "P" ], run = "plugin projects load_last", desc = "Load last project" },
+    { on = [ "P", "D" ], run = "plugin projects delete_all", desc = "Delete all projects" },
+    { on = [ "P", "m" ], run = "plugin projects 'merge current'", desc = "Merge current tab to other projects" },
+    { on = [ "P", "M" ], run = "plugin projects 'merge all'", desc = "Merge current project to other projects" },
+    { on = [ "q" ], run = "plugin projects quit", desc = "Save last project and exit the process" },
+]
+
